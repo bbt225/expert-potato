@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { db } from '@/lib/supabase'
+import { db } from '@/lib/database'
 import { Lesson, Level } from '@/types'
 
 export function useLessons(levelId?: string) {
@@ -19,7 +19,7 @@ export function useLessons(levelId?: string) {
           ? await db.lessons.getByLevel(levelId)
           : await db.lessons.getAll()
 
-        if (fetchError) throw fetchError
+        if (fetchError) throw new Error(fetchError.message)
 
         setLessons(data as Lesson[] || [])
       } catch (err: any) {
@@ -49,7 +49,7 @@ export function useLesson(lessonId: string) {
 
         const { data, error: fetchError } = await db.lessons.getById(lessonId)
 
-        if (fetchError) throw fetchError
+        if (fetchError) throw new Error(fetchError.message)
 
         setLesson(data as Lesson)
       } catch (err: any) {
@@ -81,7 +81,7 @@ export function useLevels() {
 
         const { data, error: fetchError } = await db.levels.getAll()
 
-        if (fetchError) throw fetchError
+        if (fetchError) throw new Error(fetchError.message)
 
         setLevels(data as Level[] || [])
       } catch (err: any) {

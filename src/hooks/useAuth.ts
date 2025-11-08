@@ -3,7 +3,7 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useAuthStore } from '@/store/authStore'
-import { supabase, auth, db } from '@/lib/supabase'
+import { auth, db } from '@/lib/database'
 
 export function useAuth() {
   const router = useRouter()
@@ -38,38 +38,25 @@ export function useAuth() {
     }
 
     checkSession()
-
-    // Listen for auth changes
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
-      if (event === 'SIGNED_IN' && session?.user) {
-        setUser(session.user)
-
-        // Load user profile
-        const { data: profileData } = await db.profiles.get(session.user.id)
-        if (profileData) {
-          setProfile(profileData as any)
-        }
-      } else if (event === 'SIGNED_OUT') {
-        setUser(null)
-        setProfile(null)
-      }
-
-      setLoading(false)
-    })
-
-    return () => {
-      subscription.unsubscribe()
-    }
   }, [setUser, setProfile, setLoading])
 
   const signUp = async (email: string, password: string, firstName?: string, lastName?: string) => {
     try {
       const { data, error } = await auth.signUp(email, password, { firstName, lastName })
 
-      if (error) throw error
+      if (error) {
+        return { success: false, error: error.message }
+      }
 
       if (data.user) {
         setUser(data.user)
+
+        // Load user profile
+        const { data: profileData } = await db.profiles.get(data.user.id)
+        if (profileData) {
+          setProfile(profileData)
+        }
+
         return { success: true }
       }
 
@@ -83,7 +70,9 @@ export function useAuth() {
     try {
       const { data, error } = await auth.signIn(email, password)
 
-      if (error) throw error
+      if (error) {
+        return { success: false, error: error.message }
+      }
 
       if (data.user) {
         setUser(data.user)
@@ -91,7 +80,7 @@ export function useAuth() {
         // Load user profile
         const { data: profileData } = await db.profiles.get(data.user.id)
         if (profileData) {
-          setProfile(profileData as any)
+          setProfile(profileData)
         }
 
         return { success: true }
@@ -117,7 +106,9 @@ export function useAuth() {
     try {
       const { error } = await auth.resetPassword(email)
 
-      if (error) throw error
+      if (error) {
+        return { success: false, error: error.message }
+      }
 
       return { success: true }
     } catch (error: any) {

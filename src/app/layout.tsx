@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { DataInitializer } from '@/components/DataInitializer'
 import './globals.css'
 
 const inter = Inter({
@@ -32,6 +33,7 @@ export default function RootLayout({
   return (
     <html lang="ru" className={inter.variable}>
       <body className="min-h-screen bg-neutral-50">
+        <DataInitializer />
         {children}
       </body>
     </html>

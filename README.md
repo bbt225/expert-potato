@@ -11,149 +11,124 @@
 
 - 📚 **450+ уроков** от Базового уровня до C1
 - 🎯 **Интерактивные тесты** с мгновенной обратной связью
-- 🎧 **Аудио материалы** для каждого урока
 - 📊 **Отслеживание прогресса** с детальной статистикой
 - 👤 **Личный кабинет** с историей обучения
 - 🔐 **Система подписок** с разными тарифными планами
 - 📱 **Адаптивный дизайн** для всех устройств
 - 🎨 **Современный UI** в стиле Cursor/ChatGPT
+- 💾 **localStorage** - все данные хранятся локально в браузере (без БД!)
 
 ## 🚀 Технологии
 
 - **Frontend**: Next.js 14 (Static Export), React 18, TypeScript
-- **Styling**: Tailwind CSS
-- **Backend**: Supabase (Database, Auth, Storage)
-- **State Management**: Zustand
-- **Audio**: Howler.js
+- **Styling**: Tailwind CSS, Framer Motion
+- **State Management**: Zustand + localStorage
+- **Data Storage**: localStorage (без backend!)
 - **Animations**: Framer Motion
+- **Icons**: React Icons
 - **Hosting**: GitHub Pages
 
-## 📦 Установка
+## 📦 Быстрый старт
 
 ```bash
 # Клонировать репозиторий
-git clone https://github.com/yourusername/expert-potato.git
+git clone https://github.com/bbt225/expert-potato.git
 cd expert-potato
 
 # Установить зависимости
 npm install
 
-# Создать файл .env.local
-cp .env.example .env.local
-
-# Настроить переменные окружения в .env.local
-# NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
-# NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
-
-# Запустить локальный сервер разработки
+# Запустить локальный сервер
 npm run dev
 ```
 
-Откройте [http://localhost:3000](http://localhost:3000) в браузере.
+Откройте [http://localhost:3000](http://localhost:3000)
 
-## 🏗️ Структура проекта
-
-```
-expert-potato/
-├── src/
-│   ├── app/                  # Next.js App Router pages
-│   │   ├── (auth)/          # Authentication pages
-│   │   ├── (main)/          # Main application pages
-│   │   ├── admin/           # Admin panel
-│   │   └── layout.tsx       # Root layout
-│   ├── components/          # React components
-│   │   ├── ui/             # Base UI components
-│   │   ├── lesson/         # Lesson-related components
-│   │   ├── admin/          # Admin components
-│   │   └── layout/         # Layout components
-│   ├── lib/                # Libraries and utilities
-│   │   ├── supabase.ts     # Supabase client
-│   │   └── utils.ts        # Utility functions
-│   ├── types/              # TypeScript types
-│   ├── hooks/              # Custom React hooks
-│   ├── store/              # Zustand stores
-│   └── styles/             # Global styles
-├── public/                 # Static assets
-│   ├── audio/             # Audio files
-│   └── images/            # Images
-├── .github/
-│   └── workflows/         # GitHub Actions
-└── supabase/              # Supabase schema and migrations
-```
+**Готово!** 🎉 Никаких дополнительных настроек не требуется!
 
 ## 📖 Структура курса
 
-| Уровень | Уроков | Описание |
-|---------|--------|----------|
-| Базовый | 50 | Алфавит, произношение, базовые фразы |
-| A1 | 80 | Элементарный уровень |
-| A2 | 80 | Предпороговый уровень |
-| B1 | 80 | Пороговый уровень + Subjuntivo |
-| B2 | 80 | Продвинутый пороговый |
-| C1 | 80 | Продвинутый уровень |
+| Уровень | Уроков | Описание | CEFR |
+|---------|--------|----------|------|
+| Базовый | 50 | Алфавит, произношение, базовые фразы | Pre-A1 |
+| A1 | 80 | Элементарный уровень | A1 |
+| A2 | 80 | Предпороговый уровень | A2 |
+| B1 | 80 | Пороговый уровень + Subjuntivo | B1 |
+| B2 | 80 | Продвинутый пороговый | B2 |
+| C1 | 80 | Продвинутый уровень | C1 |
 
 **Всего: 450 уроков**
 
-## 🎓 Функционал
-
-### Для студентов
-- Регистрация и вход
-- Прохождение уроков
-- Интерактивные тесты (6 типов)
-- Аудирование и чтение
-- Отслеживание прогресса
-- Личный словарь
-- Домашние задания
-
-### Для администраторов
-- Управление уроками (CRUD)
-- Загрузка аудио файлов
-- Управление пользователями
-- Аналитика и статистика
-- Массовый импорт контента
-
 ## 💳 Тарифные планы
 
-- **Free**: 10% уроков каждого уровня
+- **Free**: 10% уроков каждого уровня - бесплатно
 - **Месячный**: 990 ₽/мес - все уроки
 - **Квартальный**: 2490 ₽ (830₽/мес) - скидка 15%
 - **Годовой**: 7990 ₽ (665₽/мес) - скидка 33%
 
-## 🔧 Скрипты
-
-```bash
-npm run dev       # Запуск development сервера
-npm run build     # Сборка production версии
-npm run start     # Запуск production сервера
-npm run lint      # Запуск ESLint
-npm run deploy    # Сборка для GitHub Pages
-```
+*(В демо-версии оплата имитируется)*
 
 ## 🌐 Деплой на GitHub Pages
 
-Проект настроен для автоматического деплоя через GitHub Actions:
+### Автоматический деплой
 
-1. Пушьте в ветку `main`
-2. GitHub Actions автоматически соберет и задеплоит проект
-3. Сайт будет доступен по адресу: `https://yourusername.github.io/expert-potato/`
+1. Форкните репозиторий
+2. Обновите `basePath` в `next.config.js`:
+   ```javascript
+   basePath: process.env.NODE_ENV === 'production' ? '/ваш-репо' : '',
+   ```
+3. Push в ветку - деплой происходит автоматически!
+4. Включите GitHub Pages: Settings → Pages → Source: GitHub Actions
+
+Ваш сайт будет доступен по адресу:
+```
+https://username.github.io/repo-name/
+```
+
+## 🔧 Скрипты
+
+```bash
+npm run dev       # Development сервер
+npm run build     # Production сборка
+npm run lint      # ESLint проверка
+```
+
+## 💾 Как работает хранение данных
+
+Все данные хранятся в **localStorage** браузера:
+
+- **Пользователи** - регистрация и вход
+- **Профили** - имя, прогресс, статистика
+- **Уроки** - 450+ уроков с контентом
+- **Прогресс** - пройденные уроки, баллы
+- **Подписки** - тарифные планы (имитация)
+
+При первом запуске автоматически инициализируются моковые данные.
+
+## 📁 Структура
+
+```
+src/
+├── app/              # Next.js страницы
+├── components/       # React компоненты
+├── lib/
+│   ├── database.ts   # localStorage "база данных"
+│   └── utils.ts      # Утилиты
+├── hooks/            # Custom hooks
+├── store/            # Zustand stores
+└── types/            # TypeScript типы
+```
 
 ## 📄 Лицензия
 
-MIT License - см. [LICENSE](LICENSE)
-
-## 👥 Авторы
-
-EspañolOnline Team
+MIT License
 
 ## 🤝 Контрибуция
 
-Pull requests приветствуются! Для крупных изменений сначала откройте issue.
-
-## 📞 Контакты
-
-- Website: [https://yourusername.github.io/expert-potato](https://yourusername.github.io/expert-potato)
-- Email: support@espanolonline.com
+Pull requests приветствуются!
 
 ---
 
-Made with ❤️ for Spanish learners
+**Made with ❤️ for Spanish learners**
+
+*Проект полностью работает на клиентской стороне без необходимости backend!*
