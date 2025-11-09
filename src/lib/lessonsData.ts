@@ -12,6 +12,11 @@ import { a2LessonsImperfecto } from './a2LessonsImperfecto'
 import { a2LessonsFutureConditional } from './a2LessonsFutureConditional'
 import { a2LessonsImperativeComparatives } from './a2LessonsImperativeComparatives'
 import { a2LessonsAdvanced } from './a2LessonsAdvanced'
+import { b1LessonsSubjuntivoPresente } from './b1LessonsSubjuntivoPresente'
+import { b1LessonsSubjuntivoUses } from './b1LessonsSubjuntivoUses'
+import { b1LessonsConditional } from './b1LessonsConditional'
+import { b1LessonsIndirectSpeech } from './b1LessonsIndirectSpeech'
+import { b1LessonsAdvanced } from './b1LessonsAdvanced'
 
 // Helper function to create lesson
 const createLesson = (
@@ -237,41 +242,13 @@ export const generateAllLessons = (): Lesson[] => {
   lessons.push(...a2LessonsImperativeComparatives) // Lessons 76-90
   lessons.push(...a2LessonsAdvanced) // Lessons 91-100
 
-  // ==================== B1 LEVEL (110 lessons) ====================
-  const b1Topics = [
-    { topic: 'Subjuntivo Presente', base: 'Subj. Presente', count: 25 },
-    { topic: 'Uso del Subjuntivo', base: 'Uso Subj.', count: 20 },
-    { topic: 'Oraciones condicionales', base: 'Condicionales', count: 15 },
-    { topic: 'Estilo indirecto', base: 'Est. Indirecto', count: 15 },
-    { topic: 'Voz pasiva', base: 'Voz pasiva', count: 10 },
-    { topic: 'Perífrasis verbales', base: 'Perífrasis', count: 15 },
-    { topic: 'Conectores', base: 'Conectores', count: 10 },
-  ]
-
-  let b1Counter = 1
-  b1Topics.forEach(topic => {
-    for (let i = 0; i < topic.count; i++) {
-      lessons.push(createLesson(
-        `b1-${b1Counter}`,
-        'b1',
-        b1Counter,
-        `${topic.topic} - Модуль ${i + 1}`,
-        `Продвинутая грамматика: ${topic.topic}`,
-        {
-          spanish: [`${topic.base} ${i + 1}`, `Quiero que hables`, `Espero que vengas`],
-          russian: [`${topic.topic} ${i + 1}`, `Я хочу, чтобы ты говорил`, `Надеюсь, ты придешь`],
-          transcript: `El ${topic.base} es fundamental en el nivel B1. Módulo ${i + 1}.`,
-          questions: [{
-            question: `¿Qué estructura gramatical aprendemos?`,
-            options: [topic.topic, 'Presente simple', 'Números', 'Colores'],
-            correctAnswer: 0
-          }]
-        },
-        false
-      ))
-      b1Counter++
-    }
-  })
+  // ==================== B1 LEVEL (100 lessons) - DETAILED ====================
+  // Use detailed B1 lessons from separate files
+  lessons.push(...b1LessonsSubjuntivoPresente) // Lessons 1-25
+  lessons.push(...b1LessonsSubjuntivoUses) // Lessons 26-45
+  lessons.push(...b1LessonsConditional) // Lessons 46-60
+  lessons.push(...b1LessonsIndirectSpeech) // Lessons 61-75
+  lessons.push(...b1LessonsAdvanced) // Lessons 76-100
 
   // ==================== B2 LEVEL (110 lessons) ====================
   const b2Topics = [
