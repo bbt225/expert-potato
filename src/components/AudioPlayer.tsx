@@ -39,15 +39,15 @@ export function AudioPlayer({ text, audioUrl, lang = 'es-ES' }: AudioPlayerProps
         })
         .catch(() => {
           // Fallback to speech synthesis
-          useSpeechSynthesis()
+          synthesizeSpeech()
         })
     } else {
       // Use speech synthesis
-      useSpeechSynthesis()
+      synthesizeSpeech()
     }
   }
 
-  const useSpeechSynthesis = () => {
+  const synthesizeSpeech = () => {
     if (!('speechSynthesis' in window)) {
       console.error('Speech synthesis not supported')
       return

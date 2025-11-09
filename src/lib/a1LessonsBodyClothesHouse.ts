@@ -224,7 +224,7 @@ export const a1LessonsBodyClothesHouse: Lesson[] = [
           russian: 'Это платье мне подходит',
           context: 'Примерка',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -303,7 +303,7 @@ export const a1LessonsBodyClothesHouse: Lesson[] = [
           russian: 'Я ношу кепку, чтобы защититься от солнца',
           context: 'Объяснение',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -382,7 +382,7 @@ export const a1LessonsBodyClothesHouse: Lesson[] = [
           russian: 'Летом я ношу легкую одежду',
           context: 'О сезонных привычках',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -460,7 +460,7 @@ export const a1LessonsBodyClothesHouse: Lesson[] = [
           russian: 'Кухня очень большая',
           context: 'Характеристика',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -539,7 +539,7 @@ export const a1LessonsBodyClothesHouse: Lesson[] = [
           russian: 'Куда поставить лампу?',
           context: 'Обустройство',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -618,7 +618,7 @@ export const a1LessonsBodyClothesHouse: Lesson[] = [
           russian: 'Мне нужно поменять простыни',
           context: 'Домашние дела',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -697,7 +697,7 @@ export const a1LessonsBodyClothesHouse: Lesson[] = [
           russian: 'Мне нужно помыть посуду',
           context: 'Домашние дела',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -776,7 +776,7 @@ export const a1LessonsBodyClothesHouse: Lesson[] = [
           russian: 'Дай мне полотенце, пожалуйста',
           context: 'Просьба',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -854,7 +854,7 @@ export const a1LessonsBodyClothesHouse: Lesson[] = [
           russian: 'Я купил дом в прошлом году',
           context: 'О собственности',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -932,7 +932,7 @@ export const a1LessonsBodyClothesHouse: Lesson[] = [
           russian: 'Я помогаю маме по дому',
           context: 'О помощи',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -1009,7 +1009,7 @@ export const a1LessonsBodyClothesHouse: Lesson[] = [
           russian: 'Вы принимаете карту?',
           context: 'При оплате',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -1085,7 +1085,7 @@ export const a1LessonsBodyClothesHouse: Lesson[] = [
           russian: 'Каким был бы твой идеальный дом?',
           context: 'Вопрос о мечтах',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -1161,7 +1161,7 @@ export const a1LessonsBodyClothesHouse: Lesson[] = [
           russian: 'Мой дом всегда чистый',
           context: 'Характеристика',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,

@@ -66,7 +66,7 @@ export const a1LessonsCityTransportDaily: Lesson[] = [
           russian: 'Я иду в парк погулять',
           context: 'О планах',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -144,7 +144,7 @@ export const a1LessonsCityTransportDaily: Lesson[] = [
           russian: 'Я не могу найти свой отель',
           context: 'Просьба о помощи',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -222,7 +222,7 @@ export const a1LessonsCityTransportDaily: Lesson[] = [
           russian: 'Я езжу на метро каждый день',
           context: 'О привычках',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -300,7 +300,7 @@ export const a1LessonsCityTransportDaily: Lesson[] = [
           russian: 'Я предпочитаю ездить на велосипеде',
           context: 'О предпочтениях',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -378,7 +378,7 @@ export const a1LessonsCityTransportDaily: Lesson[] = [
           russian: 'Я всегда завтракаю перед выходом',
           context: 'О рутине',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -455,7 +455,7 @@ export const a1LessonsCityTransportDaily: Lesson[] = [
           russian: 'Мой день очень занятой',
           context: 'Описание дня',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -532,7 +532,7 @@ export const a1LessonsCityTransportDaily: Lesson[] = [
           russian: 'Мне нравится читать перед сном',
           context: 'О предпочтениях',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -612,7 +612,7 @@ export const a1LessonsCityTransportDaily: Lesson[] = [
           russian: 'В выходные я иду в кино',
           context: 'О досуге',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -689,7 +689,7 @@ export const a1LessonsCityTransportDaily: Lesson[] = [
           russian: 'Мой любимый месяц - сентябрь',
           context: 'О предпочтениях',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -768,7 +768,7 @@ export const a1LessonsCityTransportDaily: Lesson[] = [
           russian: 'Похоже, будет дождь',
           context: 'Прогноз',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -847,7 +847,7 @@ export const a1LessonsCityTransportDaily: Lesson[] = [
           russian: 'Зимой я катаюсь на лыжах в горах',
           context: 'О хобби',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -925,7 +925,7 @@ export const a1LessonsCityTransportDaily: Lesson[] = [
           russian: 'Приду через полчаса',
           context: 'О прибытии',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -1004,7 +1004,7 @@ export const a1LessonsCityTransportDaily: Lesson[] = [
           russian: 'Мне нравится гулять с друзьями',
           context: 'О досуге',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -1081,7 +1081,7 @@ export const a1LessonsCityTransportDaily: Lesson[] = [
           russian: 'Праздники - особенные моменты',
           context: 'Общее высказывание',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -1163,7 +1163,7 @@ export const a1LessonsCityTransportDaily: Lesson[] = [
           russian: 'Я готов к уровню A2',
           context: 'Следующий шаг',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
