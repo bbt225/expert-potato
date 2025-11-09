@@ -18,6 +18,7 @@ import {
 import { useAuth } from '@/hooks/useAuth'
 import { db } from '@/lib/database'
 import { Lesson, Level } from '@/types'
+import { AudioPlayer } from '@/components/AudioPlayer'
 
 type Section = 'introduction' | 'vocabulary' | 'grammar' | 'listening' | 'reading' | 'quiz' | 'complete'
 
@@ -185,9 +186,7 @@ export default function LessonClient() {
                       </div>
                       <div className="text-neutral-600">{example.russian}</div>
                     </div>
-                    <button className="p-3 hover:bg-neutral-100 rounded-lg transition-colors">
-                      <FiVolume2 className="w-6 h-6 text-primary-600" />
-                    </button>
+                    <AudioPlayer text={example.spanish} lang="es-ES" />
                   </div>
                 </div>
               ))}

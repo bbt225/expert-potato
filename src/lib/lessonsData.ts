@@ -1,4 +1,5 @@
 import { Lesson } from '@/types'
+import { a1Lessons, generateRemainingA1Lessons } from './a1LessonsDetailed'
 
 // Helper function to create lesson
 const createLesson = (
@@ -204,43 +205,10 @@ export const generateAllLessons = (): Lesson[] => {
     }
   })
 
-  // ==================== A1 LEVEL (110 lessons) ====================
-  const a1Topics = [
-    { topic: 'Глагол SER', base: 'Verbo SER', count: 15 },
-    { topic: 'Глагол ESTAR', base: 'Verbo ESTAR', count: 15 },
-    { topic: 'Глагол TENER', base: 'Verbo TENER', count: 10 },
-    { topic: 'Глагол HABER', base: 'Verbo HABER', count: 10 },
-    { topic: 'Presente de Indicativo - AR', base: 'Presente -AR', count: 15 },
-    { topic: 'Presente de Indicativo - ER', base: 'Presente -ER', count: 15 },
-    { topic: 'Presente de Indicativo - IR', base: 'Presente -IR', count: 15 },
-    { topic: 'Артикли', base: 'Los artículos', count: 10 },
-    { topic: 'Местоимения', base: 'Los pronombres', count: 15 },
-  ]
-
-  let a1Counter = 1
-  a1Topics.forEach(topic => {
-    for (let i = 0; i < topic.count; i++) {
-      lessons.push(createLesson(
-        `a1-${a1Counter}`,
-        'a1',
-        a1Counter,
-        `${topic.topic} - Часть ${i + 1}`,
-        `Детальное изучение: ${topic.topic}`,
-        {
-          spanish: [`${topic.base} ejemplo ${i + 1}`, `Yo ${topic.base.toLowerCase()}`, `Tú ${topic.base.toLowerCase()}`],
-          russian: [`Пример ${i + 1}`, `Я ${topic.topic}`, `Ты ${topic.topic}`],
-          transcript: `${topic.base} es importante en el nivel A1. Práctica número ${i + 1}.`,
-          questions: [{
-            question: `¿Cuál es el tema principal?`,
-            options: [topic.topic, 'Otro tema', 'Vocabulario', 'Números'],
-            correctAnswer: 0
-          }]
-        },
-        i < 2
-      ))
-      a1Counter++
-    }
-  })
+  // ==================== A1 LEVEL (110 lessons) - DETAILED ====================
+  // Use detailed A1 lessons from separate file
+  const detailedA1Lessons = generateRemainingA1Lessons()
+  lessons.push(...detailedA1Lessons)
 
   // ==================== A2 LEVEL (110 lessons) ====================
   const a2Topics = [
