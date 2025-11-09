@@ -7,6 +7,7 @@ import { useAuth } from '@/hooks/useAuth'
 import { db } from '@/lib/database'
 import { FiCreditCard, FiLock, FiCheckCircle, FiXCircle } from 'react-icons/fi'
 import { formatPrice } from '@/lib/utils'
+import Header from '@/components/Header'
 
 const plans = {
   monthly: { name: 'Месячный', price: 990, duration: '1 месяц' },
@@ -139,17 +140,7 @@ export default function PaymentPage() {
 
   return (
     <div className="min-h-screen bg-neutral-50">
-      {/* Navigation */}
-      <nav className="border-b border-neutral-200 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
-            <Link href="/" className="flex items-center space-x-2">
-              <span className="text-2xl font-bold text-primary-500">Español</span>
-              <span className="text-2xl font-bold text-neutral-900">Online</span>
-            </Link>
-          </div>
-        </div>
-      </nav>
+      <Header />
 
       {/* Payment Form */}
       <div className="container max-w-4xl py-12">

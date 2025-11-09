@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 import { useAuth } from '@/hooks/useAuth'
 import { db } from '@/lib/database'
 import { FiUsers, FiBook, FiDollarSign, FiTrendingUp, FiSettings } from 'react-icons/fi'
+import Header from '@/components/Header'
 
 export default function AdminPage() {
   const router = useRouter()
@@ -53,27 +54,7 @@ export default function AdminPage() {
 
   return (
     <div className="min-h-screen bg-neutral-50">
-      {/* Navigation */}
-      <nav className="border-b border-neutral-200 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
-            <Link href="/" className="flex items-center space-x-2">
-              <span className="text-2xl font-bold text-primary-500">Español</span>
-              <span className="text-2xl font-bold text-neutral-900">Online</span>
-              <span className="ml-2 px-2 py-1 bg-error text-white text-xs rounded">ADMIN</span>
-            </Link>
-
-            <div className="flex items-center space-x-4">
-              <Link href="/dashboard" className="text-neutral-700 hover:text-primary-500">
-                Кабинет
-              </Link>
-              <Link href="/admin" className="text-primary-500 font-medium">
-                Админ
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Header />
 
       {/* Content */}
       <div className="container py-8">
