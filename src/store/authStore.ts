@@ -1,16 +1,15 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-import { User as SupabaseUser } from '@supabase/supabase-js'
 import { User, Profile } from '@/types'
 
 interface AuthState {
-  user: SupabaseUser | null
+  user: User | null
   profile: Profile | null
   isLoading: boolean
   isAuthenticated: boolean
 
   // Actions
-  setUser: (user: SupabaseUser | null) => void
+  setUser: (user: User | null) => void
   setProfile: (profile: Profile | null) => void
   setLoading: (loading: boolean) => void
   logout: () => void

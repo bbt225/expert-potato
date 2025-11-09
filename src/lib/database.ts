@@ -473,4 +473,10 @@ export const initializeMockData = () => {
   window.localStorage.setItem('dataInitialized', 'true')
 }
 
-export default { auth, db, initializeMockData }
+const dbModule = {
+  auth,
+  db,
+  initializeMockData,
+}
+
+export default dbModule
