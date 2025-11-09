@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, useEffect, Suspense } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import { useAuth } from '@/hooks/useAuth'
 import { db } from '@/lib/database'
 import { FiCreditCard, FiLock, FiCheckCircle, FiXCircle } from 'react-icons/fi'
@@ -14,12 +14,10 @@ const plans = {
   yearly: { name: 'Годовой', price: 7990, duration: '1 год' },
 }
 
-function PaymentContent() {
+export default function PaymentPage() {
   const router = useRouter()
-  const searchParams = useSearchParams()
   const { user, isLoading, isAuthenticated } = useAuth()
-
-  const planId = searchParams.get('plan') || 'monthly'
+  const [planId, setPlanId] = useState('monthly')
   const plan = plans[planId as keyof typeof plans] || plans.monthly
 
   const [cardNumber, setCardNumber] = useState('')
@@ -28,6 +26,17 @@ function PaymentContent() {
   const [cardCVV, setCardCVV] = useState('')
   const [isProcessing, setIsProcessing] = useState(false)
   const [paymentStatus, setPaymentStatus] = useState<'idle' | 'success' | 'failed'>('idle')
+
+  // Read plan from URL query params on client side
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search)
+      const plan = params.get('plan')
+      if (plan && plans[plan as keyof typeof plans]) {
+        setPlanId(plan)
+      }
+    }
+  }, [])
 
   useEffect(() => {
     if (!isLoading && !isAuthenticated) {
@@ -313,17 +322,5 @@ function PaymentContent() {
         </div>
       </div>
     </div>
-  )
-}
-
-export default function PaymentPage() {
-  return (
-    <Suspense fallback={
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-neutral-600">Загрузка...</div>
-      </div>
-    }>
-      <PaymentContent />
-    </Suspense>
   )
 }
