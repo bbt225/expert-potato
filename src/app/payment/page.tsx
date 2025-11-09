@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useAuth } from '@/hooks/useAuth'
@@ -14,7 +14,7 @@ const plans = {
   yearly: { name: 'Годовой', price: 7990, duration: '1 год' },
 }
 
-export default function PaymentPage() {
+function PaymentContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const { user, isLoading, isAuthenticated } = useAuth()
@@ -313,5 +313,17 @@ export default function PaymentPage() {
         </div>
       </div>
     </div>
+  )
+}
+
+export default function PaymentPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-neutral-600">Загрузка...</div>
+      </div>
+    }>
+      <PaymentContent />
+    </Suspense>
   )
 }

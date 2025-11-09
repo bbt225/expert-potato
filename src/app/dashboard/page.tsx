@@ -25,12 +25,6 @@ export default function DashboardPage() {
     }
   }, [isLoading, isAuthenticated, router])
 
-  useEffect(() => {
-    if (user) {
-      loadStats()
-    }
-  }, [user])
-
   const loadStats = async () => {
     if (!user) return
 
@@ -51,6 +45,13 @@ export default function DashboardPage() {
       currentStreak: profile?.streak || 0,
     })
   }
+
+  useEffect(() => {
+    if (user) {
+      loadStats()
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [user])
 
   if (isLoading) {
     return (
