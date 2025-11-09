@@ -1,13 +1,6 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import { DataInitializer } from '@/components/DataInitializer'
 import './globals.css'
-
-const inter = Inter({
-  subsets: ['latin', 'cyrillic'],
-  variable: '--font-inter',
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
   title: 'EspañolOnline - Онлайн школа испанского языка',
@@ -31,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ru" className={inter.variable}>
+    <html lang="ru">
       <body className="min-h-screen bg-neutral-50">
         <DataInitializer />
         {children}

@@ -15,11 +15,9 @@ export function useLessons(levelId?: string) {
         setIsLoading(true)
         setError(null)
 
-        const { data, error: fetchError } = levelId
+        const { data } = levelId
           ? await db.lessons.getByLevel(levelId)
           : await db.lessons.getAll()
-
-        if (fetchError) throw new Error(fetchError.message)
 
         setLessons(data as Lesson[] || [])
       } catch (err: any) {
@@ -47,9 +45,7 @@ export function useLesson(lessonId: string) {
         setIsLoading(true)
         setError(null)
 
-        const { data, error: fetchError } = await db.lessons.getById(lessonId)
-
-        if (fetchError) throw new Error(fetchError.message)
+        const { data } = await db.lessons.getById(lessonId)
 
         setLesson(data as Lesson)
       } catch (err: any) {
@@ -79,9 +75,7 @@ export function useLevels() {
         setIsLoading(true)
         setError(null)
 
-        const { data, error: fetchError } = await db.levels.getAll()
-
-        if (fetchError) throw new Error(fetchError.message)
+        const { data } = await db.levels.getAll()
 
         setLevels(data as Level[] || [])
       } catch (err: any) {

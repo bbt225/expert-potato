@@ -104,12 +104,7 @@ export function useAuth() {
 
   const resetPassword = async (email: string) => {
     try {
-      const { error } = await auth.resetPassword(email)
-
-      if (error) {
-        return { success: false, error: error.message }
-      }
-
+      await auth.resetPassword(email)
       return { success: true }
     } catch (error: any) {
       return { success: false, error: error.message }

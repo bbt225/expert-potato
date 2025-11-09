@@ -3,18 +3,13 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', monospace;
-  }
-
   * {
     @apply border-neutral-200;
   }
 
   body {
     @apply bg-white text-neutral-900 antialiased;
-    font-family: var(--font-inter);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
