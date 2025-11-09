@@ -19,6 +19,7 @@ import { useAuth } from '@/hooks/useAuth'
 import { db } from '@/lib/database'
 import { Lesson, Level } from '@/types'
 import { AudioPlayer } from '@/components/AudioPlayer'
+import Header from '@/components/Header'
 
 type Section = 'introduction' | 'vocabulary' | 'grammar' | 'listening' | 'reading' | 'quiz' | 'complete'
 
@@ -532,23 +533,17 @@ export default function LessonClient() {
 
   return (
     <div className="min-h-screen bg-neutral-50">
-      {/* Navigation */}
-      <nav className="border-b border-neutral-200 bg-white sticky top-0 z-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
-            <Link href={`/levels/${levelId}`} className="flex items-center gap-2 text-neutral-600 hover:text-neutral-900">
-              <FiArrowLeft className="w-5 h-5" />
-              <span className="font-medium">Вернуться к урокам</span>
-            </Link>
+      <Header />
 
-            <div className="flex items-center gap-4">
-              <div className="text-sm text-neutral-600">
-                {level.name} - {lesson.title}
-              </div>
-            </div>
-          </div>
+      {/* Breadcrumb */}
+      <div className="bg-white border-b border-neutral-200">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <Link href={`/levels/${levelId}`} className="flex items-center gap-2 text-neutral-600 hover:text-neutral-900 w-fit">
+            <FiArrowLeft className="w-4 h-4" />
+            <span className="text-sm font-medium">{level.name} - {lesson.title}</span>
+          </Link>
         </div>
-      </nav>
+      </div>
 
       {/* Progress Bar */}
       <div className="bg-white border-b border-neutral-200">

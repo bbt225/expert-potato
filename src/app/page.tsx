@@ -3,42 +3,12 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { FiBook, FiHeadphones, FiTrendingUp, FiAward, FiUsers, FiCheckCircle } from 'react-icons/fi'
+import Header from '@/components/Header'
 
 export default function HomePage() {
   return (
     <div className="min-h-screen">
-      {/* Navigation */}
-      <nav className="border-b border-neutral-200 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
-            <Link href="/" className="flex items-center space-x-2">
-              <span className="text-2xl font-bold text-primary-500">Español</span>
-              <span className="text-2xl font-bold text-neutral-900">Online</span>
-            </Link>
-
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/levels" className="text-neutral-700 hover:text-primary-500 transition-colors">
-                Уровни
-              </Link>
-              <Link href="/pricing" className="text-neutral-700 hover:text-primary-500 transition-colors">
-                Тарифы
-              </Link>
-              <Link href="/about" className="text-neutral-700 hover:text-primary-500 transition-colors">
-                О школе
-              </Link>
-            </div>
-
-            <div className="flex items-center space-x-4">
-              <Link href="/login" className="btn-ghost btn-md">
-                Войти
-              </Link>
-              <Link href="/register" className="btn-primary btn-md">
-                Начать обучение
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Header />
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-white to-neutral-50 py-20 sm:py-32">

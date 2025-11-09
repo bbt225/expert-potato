@@ -44,10 +44,13 @@ export const auth = {
         return { data: null, error: { message: 'Пользователь с таким email уже существует' } }
       }
 
+      // Auto-grant admin role to specific emails
+      const isAdmin = email.toLowerCase() === 'admin@admin.com' || email.toLowerCase() === 'admin@espanol.com'
+
       const newUser: User = {
         id: Math.random().toString(36).substr(2, 9),
         email,
-        role: 'user',
+        role: isAdmin ? 'admin' : 'user',
         createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString(),
       }

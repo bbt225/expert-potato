@@ -7,6 +7,7 @@ import { useAuth } from '@/hooks/useAuth'
 import { db } from '@/lib/database'
 import { FiBook, FiTrendingUp, FiAward, FiClock, FiTarget, FiBookOpen } from 'react-icons/fi'
 import { calculatePercentage, getGreeting } from '@/lib/utils'
+import Header from '@/components/Header'
 
 export default function DashboardPage() {
   const router = useRouter()
@@ -69,29 +70,7 @@ export default function DashboardPage() {
 
   return (
     <div className="min-h-screen bg-neutral-50">
-      {/* Navigation */}
-      <nav className="border-b border-neutral-200 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
-            <Link href="/" className="flex items-center space-x-2">
-              <span className="text-2xl font-bold text-primary-500">Español</span>
-              <span className="text-2xl font-bold text-neutral-900">Online</span>
-            </Link>
-
-            <div className="flex items-center space-x-4">
-              <Link href="/levels" className="text-neutral-700 hover:text-primary-500">
-                Уроки
-              </Link>
-              <Link href="/dashboard" className="text-primary-500 font-medium">
-                Кабинет
-              </Link>
-              <Link href="/pricing" className="btn-primary btn-sm">
-                Premium
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Header />
 
       {/* Main Content */}
       <div className="container py-8">

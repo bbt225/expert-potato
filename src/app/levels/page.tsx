@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { FiBook, FiClock, FiAward } from 'react-icons/fi'
+import Header from '@/components/Header'
 
 const levels = [
   {
@@ -124,26 +125,7 @@ const levels = [
 export default function LevelsPage() {
   return (
     <div className="min-h-screen bg-neutral-50">
-      {/* Navigation */}
-      <nav className="border-b border-neutral-200 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex h-16 items-center justify-between">
-            <Link href="/" className="flex items-center space-x-2">
-              <span className="text-2xl font-bold text-primary-500">Español</span>
-              <span className="text-2xl font-bold text-neutral-900">Online</span>
-            </Link>
-
-            <div className="flex items-center space-x-4">
-              <Link href="/login" className="btn-ghost btn-md">
-                Войти
-              </Link>
-              <Link href="/register" className="btn-primary btn-md">
-                Начать обучение
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Header />
 
       {/* Header */}
       <section className="py-20 bg-white">
