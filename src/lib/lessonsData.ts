@@ -1,5 +1,11 @@
 import { Lesson } from '@/types'
 import { a1Lessons, generateRemainingA1Lessons } from './a1LessonsDetailed'
+import { a1LessonsIrVerbs } from './a1LessonsIrVerbs'
+import { a1LessonsQuestions } from './a1LessonsQuestions'
+import { a1LessonsPossessivesFamily } from './a1LessonsPossessivesFamily'
+import { a1LessonsFoodDrinks } from './a1LessonsFoodDrinks'
+import { a1LessonsBodyClothesHouse } from './a1LessonsBodyClothesHouse'
+import { a1LessonsCityTransportDaily } from './a1LessonsCityTransportDaily'
 
 // Helper function to create lesson
 const createLesson = (
@@ -205,10 +211,16 @@ export const generateAllLessons = (): Lesson[] => {
     }
   })
 
-  // ==================== A1 LEVEL (110 lessons) - DETAILED ====================
-  // Use detailed A1 lessons from separate file
-  const detailedA1Lessons = generateRemainingA1Lessons()
+  // ==================== A1 LEVEL (100 lessons) - DETAILED ====================
+  // Use detailed A1 lessons from separate files
+  const detailedA1Lessons = generateRemainingA1Lessons() // Lessons 1-25
   lessons.push(...detailedA1Lessons)
+  lessons.push(...a1LessonsIrVerbs) // Lessons 26-35
+  lessons.push(...a1LessonsQuestions) // Lessons 36-45
+  lessons.push(...a1LessonsPossessivesFamily) // Lessons 46-60
+  lessons.push(...a1LessonsFoodDrinks) // Lessons 61-70
+  lessons.push(...a1LessonsBodyClothesHouse) // Lessons 71-85
+  lessons.push(...a1LessonsCityTransportDaily) // Lessons 86-100
 
   // ==================== A2 LEVEL (110 lessons) ====================
   const a2Topics = [

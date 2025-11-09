@@ -1,0 +1,1161 @@
+import { Lesson } from '@/types'
+
+// A1 Lessons: Possessives and Family (Lessons 46-60)
+export const a1LessonsPossessivesFamily: Lesson[] = [
+  // ==================== ПРИТЯЖАТЕЛЬНЫЕ МЕСТОИМЕНИЯ И СЕМЬЯ (15 УРОКОВ) ====================
+  {
+    id: 'a1-46',
+    levelId: 'a1',
+    title: 'Притяжательные местоимения: MI, TU, SU',
+    description: 'Изучаем притяжательные местоимения единственного числа',
+    content: {
+      introduction: {
+        title: 'Посессивы: mi, tu, su',
+        goals: [
+          'Выучить притяжательные местоимения ед.ч.',
+          'Понять согласование по числу (mi/mis, tu/tus, su/sus)',
+          'Научиться говорить о принадлежности',
+          'Практиковать с членами семьи',
+        ],
+        overview: 'Притяжательные местоимения показывают принадлежность. Mi = мой/моя, Tu = твой/твоя, Su = его/её/Ваш.',
+      },
+      newWords: [],
+      grammar: {
+        title: 'Притяжательные местоимения',
+        explanation: 'Mi/Mis (мой), Tu/Tus (твой), Su/Sus (его/её/Ваш)',
+        examples: [
+          { spanish: 'Mi casa', russian: 'мой дом' },
+          { spanish: 'Mis libros', russian: 'мои книги' },
+          { spanish: 'Tu coche', russian: 'твоя машина' },
+          { spanish: 'Tus amigos', russian: 'твои друзья' },
+          { spanish: 'Su trabajo', russian: 'его/её работа' },
+          { spanish: 'Sus padres', russian: 'его/её родители' },
+        ],
+      },
+      listening: {
+        audioUrl: '/audio/a1-46.mp3',
+        transcript: 'Esta es mi familia. Este es mi padre y esta es mi madre. Estos son mis hermanos. ¿Y tu familia? Tu hermana es muy simpática. Su casa es grande. Sus hijos son estudiantes.',
+        questions: [
+          {
+            question: '¿Qué forma usamos para "мои книги"?',
+            options: ['mi libros', 'mis libros', 'mi libro', 'mis libro'],
+            correctAnswer: 1,
+          },
+          {
+            question: '¿Cómo se dice "твоя сестра"?',
+            options: ['tus hermana', 'tu hermana', 'tu hermano', 'tus hermanas'],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      phrases: [
+        {
+          spanish: 'Mi familia es grande',
+          russian: 'Моя семья большая',
+          context: 'Описание семьи',
+        },
+        {
+          spanish: '¿Dónde están tus llaves?',
+          russian: 'Где твои ключи?',
+          context: 'Вопрос о вещах',
+        },
+        {
+          spanish: 'Su perro es muy bonito',
+          russian: 'Его/её собака очень красивая',
+          context: 'Комплимент',
+        },
+      ],
+      homework: {
+        vocabularyTest: true,
+        listening: true,
+        reading: true,
+        writing: true,
+      },
+    },
+    audioUrl: '/audio/a1-46.mp3',
+    readingText: 'Los posesivos son palabras muy importantes. MI y MIS significan "мой/моя/мои". TU y TUS significan "твой/твоя/твои". SU y SUS significan "его/её/Ваш/ваши". Estos posesivos cambian solo en número: mi casa → mis casas, tu libro → tus libros. No cambian por género: mi padre, mi madre (ambos usan "mi").',
+    duration: 29,
+    order: 46,
+    isFree: false,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
+    id: 'a1-47',
+    levelId: 'a1',
+    title: 'Притяжательные: NUESTRO y VUESTRO',
+    description: 'Притяжательные местоимения множественного числа',
+    content: {
+      introduction: {
+        title: 'Посессивы: nuestro/nuestra, vuestro/vuestra',
+        goals: [
+          'Выучить NUESTRO (наш) и VUESTRO (ваш)',
+          'Понять согласование по роду и числу',
+          'Различать все формы (nuestro/nuestra/nuestros/nuestras)',
+          'Практиковать с разными существительными',
+        ],
+        overview: 'NUESTRO и VUESTRO изменяются по роду и числу, в отличие от mi/tu/su.',
+      },
+      newWords: [],
+      grammar: {
+        title: 'NUESTRO vs VUESTRO',
+        explanation: 'Nuestro/a/os/as = наш, Vuestro/a/os/as = ваш',
+        examples: [
+          { spanish: 'Nuestro coche', russian: 'наша машина' },
+          { spanish: 'Nuestra casa', russian: 'наш дом' },
+          { spanish: 'Nuestros amigos', russian: 'наши друзья' },
+          { spanish: 'Nuestras ideas', russian: 'наши идеи' },
+          { spanish: 'Vuestro profesor', russian: 'ваш преподаватель' },
+          { spanish: 'Vuestra ciudad', russian: 'ваш город' },
+        ],
+      },
+      listening: {
+        audioUrl: '/audio/a1-47.mp3',
+        transcript: 'Nuestra familia es grande. Nuestro padre trabaja en Madrid. Nuestra madre es profesora. Nuestros hermanos estudian en la universidad. ¿Y vuestra familia? ¿Vuestro padre trabaja?',
+        questions: [
+          {
+            question: '¿Dónde trabaja el padre?',
+            options: ['en Barcelona', 'en Madrid', 'en Valencia', 'en Sevilla'],
+            correctAnswer: 1,
+          },
+          {
+            question: '¿Qué hace la madre?',
+            options: ['es médica', 'es profesora', 'es ingeniera', 'es abogada'],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      phrases: [
+        {
+          spanish: 'Nuestra casa está en el centro',
+          russian: 'Наш дом находится в центре',
+          context: 'Описание местоположения',
+        },
+        {
+          spanish: '¿Cuál es vuestro plan?',
+          russian: 'Какой ваш план?',
+          context: 'Вопрос о планах',
+        },
+        {
+          spanish: 'Nuestros hijos van a la escuela',
+          russian: 'Наши дети ходят в школу',
+          context: 'О детях',
+        },
+      ],
+      homework: {
+        vocabularyTest: true,
+        listening: true,
+        reading: true,
+        writing: false,
+      },
+    },
+    audioUrl: '/audio/a1-47.mp3',
+    readingText: 'NUESTRO y VUESTRO son diferentes de MI y TU porque cambian según el género y el número. Nuestro libro (м.р., ед.ч.), nuestra mesa (ж.р., ед.ч.), nuestros libros (м.р., мн.ч.), nuestras mesas (ж.р., мн.ч.). Lo mismo con VUESTRO: vuestro coche, vuestra casa, vuestros amigos, vuestras amigas.',
+    duration: 30,
+    order: 47,
+    isFree: false,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
+    id: 'a1-48',
+    levelId: 'a1',
+    title: 'Семья: родители',
+    description: 'Учим слова: padre, madre, padres',
+    content: {
+      introduction: {
+        title: 'La familia: Los padres',
+        goals: [
+          'Выучить слова padre, madre, padres',
+          'Научиться говорить о родителях',
+          'Использовать с притяжательными местоимениями',
+          'Задавать вопросы о семье',
+        ],
+        overview: 'Padre = отец, Madre = мать, Padres = родители. Важные слова для описания семьи.',
+      },
+      newWords: [],
+      grammar: {
+        title: 'Vocabulario: Padres',
+        explanation: 'Padre (отец), Madre (мать), Padres (родители)',
+        examples: [
+          { spanish: 'Mi padre trabaja', russian: 'мой отец работает' },
+          { spanish: 'Mi madre cocina', russian: 'моя мать готовит' },
+          { spanish: 'Mis padres viven en España', russian: 'мои родители живут в Испании' },
+          { spanish: 'Tu padre es médico', russian: 'твой отец врач' },
+          { spanish: 'Su madre es profesora', russian: 'её мать учительница' },
+          { spanish: 'Nuestros padres son jubilados', russian: 'наши родители на пенсии' },
+        ],
+      },
+      listening: {
+        audioUrl: '/audio/a1-48.mp3',
+        transcript: 'Mi padre se llama Juan. Mi madre se llama María. Mis padres tienen 60 años. Mi padre es ingeniero y mi madre es enfermera. Viven en Sevilla. ¿Cómo se llaman tus padres?',
+        questions: [
+          {
+            question: '¿Cómo se llama el padre?',
+            options: ['Pedro', 'Juan', 'Carlos', 'Miguel'],
+            correctAnswer: 1,
+          },
+          {
+            question: '¿Qué profesión tiene la madre?',
+            options: ['médica', 'profesora', 'enfermera', 'abogada'],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      phrases: [
+        {
+          spanish: 'Mi padre tiene 50 años',
+          russian: 'Моему отцу 50 лет',
+          context: 'Говоря о возрасте',
+        },
+        {
+          spanish: 'Mis padres celebran su aniversario',
+          russian: 'Мои родители празднуют годовщину',
+          context: 'О событии',
+        },
+        {
+          spanish: '¿Dónde viven tus padres?',
+          russian: 'Где живут твои родители?',
+          context: 'Вопрос о месте жительства',
+        },
+      ],
+      homework: {
+        vocabularyTest: true,
+        listening: true,
+        reading: true,
+        writing: true,
+      },
+    },
+    audioUrl: '/audio/a1-48.mp3',
+    readingText: 'La familia es muy importante en la cultura hispana. El PADRE es el papá. La MADRE es la mamá. Juntos son LOS PADRES. Podemos usar formas cariñosas: papá, mamá, papi, mami. También: mi viejo, mi vieja (coloquial). Es común vivir cerca de los padres y visitarlos frecuentemente.',
+    duration: 27,
+    order: 48,
+    isFree: false,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
+    id: 'a1-49',
+    levelId: 'a1',
+    title: 'Семья: братья и сестры',
+    description: 'Hermano, hermana, hermanos',
+    content: {
+      introduction: {
+        title: 'La familia: Hermanos',
+        goals: [
+          'Выучить hermano (брат) и hermana (сестра)',
+          'Понять множественное число hermanos',
+          'Научиться говорить о братьях и сестрах',
+          'Использовать mayor (старший) и menor (младший)',
+        ],
+        overview: 'Hermano = брат, Hermana = сестра, Hermanos = братья/сестры (смешанная группа)',
+      },
+      newWords: [],
+      grammar: {
+        title: 'Vocabulario: Hermanos',
+        explanation: 'Hermano (брат), Hermana (сестра), Hermanos (братья и сестры)',
+        examples: [
+          { spanish: 'Mi hermano se llama Pedro', russian: 'моего брата зовут Педро' },
+          { spanish: 'Mi hermana tiene 20 años', russian: 'моей сестре 20 лет' },
+          { spanish: 'Tengo dos hermanos', russian: 'у меня два брата/двое братьев и сестер' },
+          { spanish: 'Mi hermano mayor', russian: 'мой старший брат' },
+          { spanish: 'Mi hermana menor', russian: 'моя младшая сестра' },
+          { spanish: 'Somos tres hermanos', russian: 'нас трое братьев/сестер' },
+        ],
+      },
+      listening: {
+        audioUrl: '/audio/a1-49.mp3',
+        transcript: 'Tengo un hermano y una hermana. Mi hermano mayor se llama Carlos y tiene 30 años. Mi hermana menor se llama Ana y tiene 18 años. Yo soy el del medio. Mis hermanos viven conmigo.',
+        questions: [
+          {
+            question: '¿Cuántos hermanos tiene en total?',
+            options: ['uno', 'dos', 'tres', 'cuatro'],
+            correctAnswer: 1,
+          },
+          {
+            question: '¿Quién es el mayor?',
+            options: ['el que habla', 'Carlos', 'Ana', 'no dice'],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      phrases: [
+        {
+          spanish: '¿Tienes hermanos?',
+          russian: 'У тебя есть братья/сестры?',
+          context: 'Стандартный вопрос о семье',
+        },
+        {
+          spanish: 'Soy hijo único / hija única',
+          russian: 'Я единственный ребенок',
+          context: 'Если нет братьев и сестер',
+        },
+        {
+          spanish: 'Mis hermanos y yo somos muy unidos',
+          russian: 'Мы с братьями/сестрами очень близки',
+          context: 'Описание отношений',
+        },
+      ],
+      homework: {
+        vocabularyTest: true,
+        listening: true,
+        reading: true,
+        writing: true,
+      },
+    },
+    audioUrl: '/audio/a1-49.mp3',
+    readingText: 'Los HERMANOS son muy importantes en la familia. Un HERMANO es un chico. Una HERMANA es una chica. HERMANOS puede significar solo hermanos varones, o hermanos y hermanas juntos. El hermano MAYOR es el más viejo. El hermano MENOR es el más joven. Si eres el único: hijo único (м) o hija única (ж).',
+    duration: 28,
+    order: 49,
+    isFree: false,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
+    id: 'a1-50',
+    levelId: 'a1',
+    title: 'Семья: дети',
+    description: 'Hijo, hija, hijos - говорим о детях',
+    content: {
+      introduction: {
+        title: 'La familia: Hijos',
+        goals: [
+          'Выучить hijo (сын) и hija (дочь)',
+          'Научиться говорить о своих детях',
+          'Использовать числительные с hijos',
+          'Практиковать вопросы о детях',
+        ],
+        overview: 'Hijo = сын, Hija = дочь, Hijos = дети/сыновья',
+      },
+      newWords: [],
+      grammar: {
+        title: 'Vocabulario: Hijos',
+        explanation: 'Hijo (сын), Hija (дочь), Hijos (дети)',
+        examples: [
+          { spanish: 'Mi hijo tiene 5 años', russian: 'моему сыну 5 лет' },
+          { spanish: 'Mi hija va a la escuela', russian: 'моя дочь ходит в школу' },
+          { spanish: 'Tengo tres hijos', russian: 'у меня трое детей' },
+          { spanish: 'Sus hijos son gemelos', russian: 'его дети близнецы' },
+          { spanish: 'Nuestros hijos estudian mucho', russian: 'наши дети много учатся' },
+          { spanish: '¿Cuántos hijos tienes?', russian: 'сколько у тебя детей?' },
+        ],
+      },
+      listening: {
+        audioUrl: '/audio/a1-50.mp3',
+        transcript: 'Mi hermana tiene dos hijos. Su hijo se llama Tomás y tiene 8 años. Su hija se llama Laura y tiene 6 años. Mis hijos son mis sobrinos. Son muy inteligentes y estudian en una buena escuela.',
+        questions: [
+          {
+            question: '¿Cuántos hijos tiene la hermana?',
+            options: ['uno', 'dos', 'tres', 'cuatro'],
+            correctAnswer: 1,
+          },
+          {
+            question: '¿Cómo se llama el hijo?',
+            options: ['Pedro', 'Juan', 'Tomás', 'Carlos'],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      phrases: [
+        {
+          spanish: '¿Tienes hijos?',
+          russian: 'У тебя есть дети?',
+          context: 'Вопрос о семье',
+        },
+        {
+          spanish: 'Mis hijos son mi alegría',
+          russian: 'Мои дети - моя радость',
+          context: 'Выражение любви',
+        },
+        {
+          spanish: 'Es hijo único',
+          russian: 'Он единственный ребенок',
+          context: 'Описание семьи',
+        },
+      },
+      homework: {
+        vocabularyTest: true,
+        listening: true,
+        reading: false,
+        writing: true,
+      },
+    },
+    audioUrl: '/audio/a1-50.mp3',
+    readingText: 'HIJO e HIJA son palabras esenciales. Un HIJO es un niño varón en relación con sus padres. Una HIJA es una niña. HIJOS puede significar solo hijos varones, o hijos e hijas juntos. Pregunta común: ¿Tienes hijos? ¿Cuántos hijos tienes? Los hijos pueden ser pequeños (niños) o adultos - siempre son hijos de sus padres.',
+    duration: 27,
+    order: 50,
+    isFree: false,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
+    id: 'a1-51',
+    levelId: 'a1',
+    title: 'Семья: бабушка и дедушка',
+    description: 'Abuelo, abuela, abuelos',
+    content: {
+      introduction: {
+        title: 'La familia: Abuelos',
+        goals: [
+          'Выучить abuelo (дедушка) и abuela (бабушка)',
+          'Научиться говорить о бабушках и дедушках',
+          'Использовать ласкательные формы',
+          'Рассказывать о старшем поколении',
+        ],
+        overview: 'Abuelo = дедушка, Abuela = бабушка, Abuelos = бабушка и дедушка',
+      },
+      newWords: [],
+      grammar: {
+        title: 'Vocabulario: Abuelos',
+        explanation: 'Abuelo (дедушка), Abuela (бабушка), Abuelos (дедушка и бабушка)',
+        examples: [
+          { spanish: 'Mi abuelo tiene 80 años', russian: 'моему дедушке 80 лет' },
+          { spanish: 'Mi abuela cocina muy bien', russian: 'моя бабушка очень хорошо готовит' },
+          { spanish: 'Mis abuelos viven en el campo', russian: 'мои бабушка и дедушка живут в деревне' },
+          { spanish: 'Visito a mis abuelos cada domingo', russian: 'я навещаю бабушку и дедушку каждое воскресенье' },
+          { spanish: 'El abuelo paterno', russian: 'дедушка по отцу' },
+          { spanish: 'La abuela materna', russian: 'бабушка по матери' },
+        ],
+      },
+      listening: {
+        audioUrl: '/audio/a1-51.mp3',
+        transcript: 'Mis abuelos son maravillosos. Mi abuelo se llama Antonio y tiene 78 años. Mi abuela se llama Carmen y tiene 75 años. Viven en un pueblo pequeño. Cada verano voy a visitarlos. Mi abuela hace las mejores comidas.',
+        questions: [
+          {
+            question: '¿Cuántos años tiene el abuelo?',
+            options: ['75', '78', '80', '82'],
+            correctAnswer: 1,
+          },
+          {
+            question: '¿Dónde viven los abuelos?',
+            options: ['en la ciudad', 'en un pueblo', 'en Madrid', 'en el extranjero'],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      phrases: [
+        {
+          spanish: 'Quiero mucho a mis abuelos',
+          russian: 'Я очень люблю своих бабушку и дедушку',
+          context: 'Выражение чувств',
+        },
+        {
+          spanish: 'Mi abuela me cuenta historias',
+          russian: 'Моя бабушка рассказывает мне истории',
+          context: 'Описание занятий',
+        },
+        {
+          spanish: '¿Viven tus abuelos?',
+          russian: 'Твои бабушка и дедушка живы?',
+          context: 'Вопрос о семье',
+        },
+      },
+      homework: {
+        vocabularyTest: true,
+        listening: true,
+        reading: true,
+        writing: true,
+      },
+    },
+    audioUrl: '/audio/a1-51.mp3',
+    readingText: 'Los ABUELOS son muy queridos en la cultura hispana. El ABUELO es el padre de tu padre o madre. La ABUELA es la madre de tu padre o madre. Formas cariñosas: abuelito, abuelita, yayo, yaya. Los abuelos a menudo cuidan a los nietos y transmiten tradiciones familiares. Es común que varias generaciones vivan cerca.',
+    duration: 29,
+    order: 51,
+    isFree: false,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
+    id: 'a1-52',
+    levelId: 'a1',
+    title: 'Семья: внуки',
+    description: 'Nieto, nieta, nietos',
+    content: {
+      introduction: {
+        title: 'La familia: Nietos',
+        goals: [
+          'Выучить nieto (внук) и nieta (внучка)',
+          'Научиться говорить о внуках',
+          'Понять родственные связи поколений',
+          'Практиковать описание семейного древа',
+        ],
+        overview: 'Nieto = внук, Nieta = внучка, Nietos = внуки',
+      },
+      newWords: [],
+      grammar: {
+        title: 'Vocabulario: Nietos',
+        explanation: 'Nieto (внук), Nieta (внучка), Nietos (внуки)',
+        examples: [
+          { spanish: 'Mi nieto tiene 3 años', russian: 'моему внуку 3 года' },
+          { spanish: 'Mi nieta es muy inteligente', russian: 'моя внучка очень умная' },
+          { spanish: 'Tengo cuatro nietos', russian: 'у меня четверо внуков' },
+          { spanish: 'Los nietos visitan a los abuelos', russian: 'внуки навещают бабушку и дедушку' },
+          { spanish: 'Es el nieto favorito', russian: 'это любимый внук' },
+          { spanish: 'Mis nietos me hacen feliz', russian: 'мои внуки делают меня счастливым' },
+        ],
+      },
+      listening: {
+        audioUrl: '/audio/a1-52.mp3',
+        transcript: 'Mi abuela habla de sus nietos con mucho amor. Tiene seis nietos en total. Su nieto mayor tiene 15 años y su nieta menor tiene 2 años. Todos los nietos viven cerca y la visitan frecuentemente.',
+        questions: [
+          {
+            question: '¿Cuántos nietos tiene la abuela?',
+            options: ['cuatro', 'cinco', 'seis', 'siete'],
+            correctAnswer: 2,
+          },
+          {
+            question: '¿Cuántos años tiene el nieto mayor?',
+            options: ['12', '15', '18', '20'],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      phrases: [
+        {
+          spanish: 'Soy el nieto de Antonio',
+          russian: 'Я внук Антонио',
+          context: 'Представление',
+        },
+        {
+          spanish: 'Mis abuelos adoran a sus nietos',
+          russian: 'Мои бабушка и дедушка обожают своих внуков',
+          context: 'О семейных отношениях',
+        },
+        {
+          spanish: '¿Cuántos nietos tienen?',
+          russian: 'Сколько у них внуков?',
+          context: 'Вопрос о семье',
+        },
+      ],
+      homework: {
+        vocabularyTest: true,
+        listening: true,
+        reading: true,
+        writing: false,
+      },
+    },
+    audioUrl: '/audio/a1-52.mp3',
+    readingText: 'Los NIETOS son los hijos de tus hijos. Un NIETO es el hijo varón de tu hijo o hija. Una NIETA es la hija de tu hijo o hija. Para los abuelos, los nietos son muy especiales. En España y Latinoamérica, es común que los abuelos pasen mucho tiempo con sus nietos, los cuiden y les enseñen cosas.',
+    duration: 26,
+    order: 52,
+    isFree: false,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
+    id: 'a1-53',
+    levelId: 'a1',
+    title: 'Семья: тети и дяди',
+    description: 'Tío, tía, tíos',
+    content: {
+      introduction: {
+        title: 'La familia: Tíos',
+        goals: [
+          'Выучить tío (дядя) y tía (тетя)',
+          'Научиться говорить о дядях и тетях',
+          'Понять расширенную семью',
+          'Использовать в контексте семейных встреч',
+        ],
+        overview: 'Tío = дядя, Tía = тетя, Tíos = дяди и тети',
+      },
+      newWords: [],
+      grammar: {
+        title: 'Vocabulario: Tíos',
+        explanation: 'Tío (дядя), Tía (тетя), Tíos (дяди и тети)',
+        examples: [
+          { spanish: 'Mi tío vive en México', russian: 'мой дядя живет в Мексике' },
+          { spanish: 'Mi tía es médica', russian: 'моя тетя врач' },
+          { spanish: 'Mis tíos tienen tres hijos', russian: 'у моих дяди и тети трое детей' },
+          { spanish: 'El tío Juan', russian: 'дядя Хуан' },
+          { spanish: 'La tía María es muy simpática', russian: 'тетя Мария очень приятная' },
+          { spanish: 'Visito a mis tíos en verano', russian: 'я навещаю дядю и тетю летом' },
+        ],
+      },
+      listening: {
+        audioUrl: '/audio/a1-53.mp3',
+        transcript: 'Tengo muchos tíos. Mi tío Pedro es el hermano de mi padre. Mi tía Rosa es la hermana de mi madre. Mis tíos viven en diferentes ciudades. Este fin de semana vamos a casa de mi tío Carlos para una reunión familiar.',
+        questions: [
+          {
+            question: '¿Quién es Pedro?',
+            options: ['hermano de la madre', 'hermano del padre', 'primo', 'abuelo'],
+            correctAnswer: 1,
+          },
+          {
+            question: '¿Qué van a hacer este fin de semana?',
+            options: ['ir de compras', 'ir al cine', 'reunión familiar', 'viajar'],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      phrases: [
+        {
+          spanish: 'Mi tío favorito se llama Luis',
+          russian: 'Моего любимого дядю зовут Луис',
+          context: 'О предпочтениях',
+        },
+        {
+          spanish: '¿Cuántos tíos tienes?',
+          russian: 'Сколько у тебя дядь и теть?',
+          context: 'Вопрос о семье',
+        },
+        {
+          spanish: 'Mis tíos nos invitan a cenar',
+          russian: 'Мои дядя и тетя приглашают нас на ужин',
+          context: 'О планах',
+        },
+      },
+      homework: {
+        vocabularyTest: true,
+        listening: true,
+        reading: true,
+        writing: true,
+      },
+    },
+    audioUrl: '/audio/a1-53.mp3',
+    readingText: 'Los TÍOS son hermanos o hermanas de tus padres. El TÍO puede ser el hermano de tu padre o de tu madre. La TÍA puede ser la hermana de tu padre o de tu madre. También llamamos TÍO/TÍA a los esposos de estos hermanos. En español, "tío/tía" también se usa coloquialmente para decir "amigo/amiga" (¡Hola, tío!).',
+    duration: 28,
+    order: 53,
+    isFree: false,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
+    id: 'a1-54',
+    levelId: 'a1',
+    title: 'Семья: племянники',
+    description: 'Sobrino, sobrina, sobrinos',
+    content: {
+      introduction: {
+        title: 'La familia: Sobrinos',
+        goals: [
+          'Выучить sobrino (племянник) y sobrina (племянница)',
+          'Научиться говорить о племянниках',
+          'Понять связь tío-sobrino',
+          'Практиковать в семейном контексте',
+        ],
+        overview: 'Sobrino = племянник, Sobrina = племянница, Sobrinos = племянники',
+      },
+      newWords: [],
+      grammar: {
+        title: 'Vocabulario: Sobrinos',
+        explanation: 'Sobrino (племянник), Sobrina (племянница), Sobrinos (племянники)',
+        examples: [
+          { spanish: 'Mi sobrino tiene 10 años', russian: 'моему племяннику 10 лет' },
+          { spanish: 'Mi sobrina estudia medicina', russian: 'моя племянница изучает медицину' },
+          { spanish: 'Tengo seis sobrinos', russian: 'у меня шестеро племянников' },
+          { spanish: 'Mis sobrinos son muy traviesos', russian: 'мои племянники очень озорные' },
+          { spanish: 'El sobrino favorito', russian: 'любимый племянник' },
+          { spanish: 'Llevo a mis sobrinos al parque', russian: 'я вожу племянников в парк' },
+        ],
+      },
+      listening: {
+        audioUrl: '/audio/a1-54.mp3',
+        transcript: 'Soy tío de cinco sobrinos. Mi sobrino mayor se llama Diego y tiene 12 años. Mi sobrina menor se llama Sofía y tiene 4 años. Me encanta pasar tiempo con mis sobrinos. Este sábado vamos al zoológico juntos.',
+        questions: [
+          {
+            question: '¿Cuántos sobrinos tiene?',
+            options: ['tres', 'cuatro', 'cinco', 'seis'],
+            correctAnswer: 2,
+          },
+          {
+            question: '¿Adónde van el sábado?',
+            options: ['al cine', 'al parque', 'al zoológico', 'a la playa'],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      phrases: [
+        {
+          spanish: 'Mis sobrinos me hacen tío',
+          russian: 'Мои племянники делают меня дядей',
+          context: 'О роли в семье',
+        },
+        {
+          spanish: 'Compré regalos para mis sobrinos',
+          russian: 'Я купил подарки для племянников',
+          context: 'О покупках',
+        },
+        {
+          spanish: '¿Cuántos sobrinos tienes?',
+          russian: 'Сколько у тебя племянников?',
+          context: 'Вопрос о семье',
+        },
+      },
+      homework: {
+        vocabularyTest: true,
+        listening: true,
+        reading: false,
+        writing: true,
+      },
+    },
+    audioUrl: '/audio/a1-54.mp3',
+    readingText: 'Los SOBRINOS son los hijos de tus hermanos o hermanas. Un SOBRINO es el hijo varón de tu hermano o hermana. Una SOBRINA es la hija de tu hermano o hermana. Si tienes sobrinos, tú eres su TÍO (si eres hombre) o su TÍA (si eres mujer). Los tíos a menudo tienen una relación especial con sus sobrinos.',
+    duration: 27,
+    order: 54,
+    isFree: false,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
+    id: 'a1-55',
+    levelId: 'a1',
+    title: 'Семья: двоюродные братья',
+    description: 'Primo, prima, primos',
+    content: {
+      introduction: {
+        title: 'La familia: Primos',
+        goals: [
+          'Выучить primo (двоюродный брат) y prima (двоюродная сестра)',
+          'Научиться говорить о кузенах',
+          'Различать hermano y primo',
+          'Рассказывать о семейных собраниях',
+        ],
+        overview: 'Primo = двоюродный брат/кузен, Prima = двоюродная сестра/кузина',
+      },
+      newWords: [],
+      grammar: {
+        title: 'Vocabulario: Primos',
+        explanation: 'Primo (двоюродный брат), Prima (двоюродная сестра), Primos (кузены)',
+        examples: [
+          { spanish: 'Mi primo vive en Argentina', russian: 'мой двоюродный брат живет в Аргентине' },
+          { spanish: 'Mi prima es ingeniera', russian: 'моя двоюродная сестра инженер' },
+          { spanish: 'Tengo muchos primos', russian: 'у меня много кузенов' },
+          { spanish: 'Mis primos y yo jugamos juntos', russian: 'мы с кузенами играем вместе' },
+          { spanish: 'El primo segundo', russian: 'троюродный брат' },
+          { spanish: 'Somos primos hermanos', russian: 'мы двоюродные братья' },
+        ],
+      },
+      listening: {
+        audioUrl: '/audio/a1-55.mp3',
+        transcript: 'Tengo muchos primos porque mi padre tiene cuatro hermanos. Mi primo favorito se llama Javier. Él y yo tenemos la misma edad. Cada Navidad toda la familia se reúne y vemos a todos nuestros primos. Son más de veinte primos en total.',
+        questions: [
+          {
+            question: '¿Cómo se llama el primo favorito?',
+            options: ['Carlos', 'Pedro', 'Javier', 'Miguel'],
+            correctAnswer: 2,
+          },
+          {
+            question: '¿Cuántos primos hay en total?',
+            options: ['más de diez', 'más de quince', 'más de veinte', 'más de treinta'],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      phrases: [
+        {
+          spanish: 'Me llevo muy bien con mis primos',
+          russian: 'Я очень хорошо лажу со своими кузенами',
+          context: 'О отношениях',
+        },
+        {
+          spanish: 'Vamos a una boda de mi prima',
+          russian: 'Мы идем на свадьбу моей кузины',
+          context: 'О событии',
+        },
+        {
+          spanish: '¿Cuántos primos tienes?',
+          russian: 'Сколько у тебя двоюродных братьев и сестер?',
+          context: 'Вопрос о семье',
+        },
+      },
+      homework: {
+        vocabularyTest: true,
+        listening: true,
+        reading: true,
+        writing: true,
+      },
+    },
+    audioUrl: '/audio/a1-55.mp3',
+    readingText: 'Los PRIMOS son los hijos de tus tíos. Un PRIMO es el hijo varón de tu tío o tía. Una PRIMA es la hija de tu tío o tía. En familias grandes, puedes tener muchos primos. Los primos hermanos comparten abuelos. Los primos segundos comparten bisabuelos. Los primos a menudo son amigos cercanos en la infancia.',
+    duration: 29,
+    order: 55,
+    isFree: false,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
+    id: 'a1-56',
+    levelId: 'a1',
+    title: 'Семья: супруги',
+    description: 'Esposo, esposa, marido, mujer',
+    content: {
+      introduction: {
+        title: 'La familia: Esposos',
+        goals: [
+          'Выучить esposo/marido (муж) y esposa/mujer (жена)',
+          'Различать синонимы',
+          'Научиться говорить о супругах',
+          'Использовать в контексте брака',
+        ],
+        overview: 'Esposo/Marido = муж, Esposa/Mujer = жена. Разные слова, одно значение.',
+      },
+      newWords: [],
+      grammar: {
+        title: 'Vocabulario: Esposos',
+        explanation: 'Esposo = Marido (муж), Esposa = Mujer (жена)',
+        examples: [
+          { spanish: 'Mi esposo es médico', russian: 'мой муж врач' },
+          { spanish: 'Su esposa trabaja en un banco', russian: 'его жена работает в банке' },
+          { spanish: 'Mi marido cocina muy bien', russian: 'мой муж очень хорошо готовит' },
+          { spanish: 'Mi mujer es profesora', russian: 'моя жена учительница' },
+          { spanish: 'Los esposos celebran su aniversario', russian: 'супруги празднуют годовщину' },
+          { spanish: 'Marido y mujer', russian: 'муж и жена' },
+        ],
+      },
+      listening: {
+        audioUrl: '/audio/a1-56.mp3',
+        transcript: 'Mi hermana está casada. Su esposo se llama Roberto. Ellos se casaron hace cinco años. Roberto es ingeniero y mi hermana es abogada. Son una pareja muy feliz. Viven en una casa cerca de la playa.',
+        questions: [
+          {
+            question: '¿Cómo se llama el esposo de la hermana?',
+            options: ['Carlos', 'Roberto', 'Pedro', 'Juan'],
+            correctAnswer: 1,
+          },
+          {
+            question: '¿Hace cuánto se casaron?',
+            options: ['tres años', 'cinco años', 'siete años', 'diez años'],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      phrases: [
+        {
+          spanish: 'Te presento a mi esposa',
+          russian: 'Представляю тебе мою жену',
+          context: 'Знакомство',
+        },
+        {
+          spanish: 'Mi marido y yo viajamos mucho',
+          russian: 'Мы с мужем много путешествуем',
+          context: 'О хобби',
+        },
+        {
+          spanish: '¿Estás casado/casada?',
+          russian: 'Ты женат/замужем?',
+          context: 'Вопрос о семейном положении',
+        },
+      },
+      homework: {
+        vocabularyTest: true,
+        listening: true,
+        reading: true,
+        writing: false,
+      },
+    },
+    audioUrl: '/audio/a1-56.mp3',
+    readingText: 'Para hablar del cónyuge, tenemos varias palabras. ESPOSO y MARIDO significan lo mismo (муж). ESPOSA y MUJER también (жена). ESPOSO/ESPOSA son más formales. MARIDO/MUJER son más comunes en el habla cotidiana. También: mi pareja (моя пара), mi media naranja (моя половинка - literalmente "mi media naranja").',
+    duration: 28,
+    order: 56,
+    isFree: false,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
+    id: 'a1-57',
+    levelId: 'a1',
+    title: 'Семья: свекры и зятья',
+    description: 'Suegro, suegra, yerno, nuera',
+    content: {
+      introduction: {
+        title: 'La familia política',
+        goals: [
+          'Выучить suegro (свекор/тесть) y suegra (свекровь/теща)',
+          'Научиться говорить о семье супруга',
+          'Выучить yerno (зять) y nuera (невестка)',
+          'Понять семейную иерархию',
+        ],
+        overview: 'Suegro/a = родители супруга, Yerno = зять, Nuera = невестка',
+      },
+      newWords: [],
+      grammar: {
+        title: 'Vocabulario: Familia política',
+        explanation: 'Suegro (свекор/тесть), Suegra (свекровь/теща), Yerno (зять), Nuera (невестка)',
+        examples: [
+          { spanish: 'Mi suegro es muy amable', russian: 'мой тесть очень любезный' },
+          { spanish: 'Mi suegra cocina delicioso', russian: 'моя свекровь вкусно готовит' },
+          { spanish: 'Mis suegros viven en Valencia', russian: 'мои свекры живут в Валенсии' },
+          { spanish: 'Mi yerno es arquitecto', russian: 'мой зять архитектор' },
+          { spanish: 'Mi nuera es muy educada', russian: 'моя невестка очень воспитанная' },
+          { spanish: 'Ceno con mis suegros los domingos', russian: 'я ужинаю со свекрами по воскресеньям' },
+        ],
+      },
+      listening: {
+        audioUrl: '/audio/a1-57.mp3',
+        transcript: 'Tengo una buena relación con mis suegros. Mi suegro es jubilado y mi suegra es profesora. Viven cerca de nosotros. Mis padres también adoran a mi esposa, su nuera. Mi hermano está casado y su esposa es nuestra nueva cuñada.',
+        questions: [
+          {
+            question: '¿Qué hace el suegro?',
+            options: ['es profesor', 'es jubilado', 'es médico', 'es ingeniero'],
+            correctAnswer: 1,
+          },
+          {
+            question: '¿Qué hace la suegra?',
+            options: ['es enfermera', 'es abogada', 'es profesora', 'es jubilada'],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      phrases: [
+        {
+          spanish: 'Visito a mis suegros cada fin de semana',
+          russian: 'Я навещаю свекров каждые выходные',
+          context: 'О привычках',
+        },
+        {
+          spanish: 'Mi yerno es como un hijo para mí',
+          russian: 'Мой зять для меня как сын',
+          context: 'О отношениях',
+        },
+        {
+          spanish: 'Me llevo bien con mi suegra',
+          russian: 'Я хорошо лажу со свекровью',
+          context: 'О взаимоотношениях',
+        },
+      },
+      homework: {
+        vocabularyTest: true,
+        listening: true,
+        reading: true,
+        writing: true,
+      },
+    },
+    audioUrl: '/audio/a1-57.mp3',
+    readingText: 'La familia política es la familia de tu esposo/esposa. SUEGRO es el padre de tu cónyuge. SUEGRA es la madre de tu cónyuge. Si eres hombre y te casas, eres el YERNO de tus suegros. Si eres mujer y te casas, eres la NUERA de tus suegros. Estas relaciones son importantes en la cultura hispana.',
+    duration: 30,
+    order: 57,
+    isFree: false,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
+    id: 'a1-58',
+    levelId: 'a1',
+    title: 'Семья: шурины и деверья',
+    description: 'Cuñado, cuñada',
+    content: {
+      introduction: {
+        title: 'La familia: Cuñados',
+        goals: [
+          'Выучить cuñado (шурин/деверь) y cuñada (золовка/свояченица)',
+          'Понять семейные связи через брак',
+          'Научиться говорить о братьях и сестрах супруга',
+          'Использовать в семейном контексте',
+        ],
+        overview: 'Cuñado = брат/сестра супруга (мужского рода), Cuñada = брат/сестра супруга (женского рода)',
+      },
+      newWords: [],
+      grammar: {
+        title: 'Vocabulario: Cuñados',
+        explanation: 'Cuñado (деверь/шурин/зять), Cuñada (золовка/свояченица/невестка)',
+        examples: [
+          { spanish: 'Mi cuñado es simpático', russian: 'мой деверь симпатичный' },
+          { spanish: 'Mi cuñada vive en Italia', russian: 'моя золовка живет в Италии' },
+          { spanish: 'Mis cuñados vienen a cenar', russian: 'мои деверья приходят на ужин' },
+          { spanish: 'El hermano de mi esposa es mi cuñado', russian: 'брат моей жены - мой шурин' },
+          { spanish: 'La hermana de mi marido es mi cuñada', russian: 'сестра моего мужа - моя золовка' },
+          { spanish: 'Tengo tres cuñados', russian: 'у меня три деверя/шурина' },
+        ],
+      },
+      listening: {
+        audioUrl: '/audio/a1-58.mp3',
+        transcript: 'Mi esposo tiene dos hermanos y una hermana. Sus hermanos son mis cuñados y su hermana es mi cuñada. Mi cuñada se llama Elena y es muy amable. Nos vemos frecuentemente en reuniones familiares. Mis cuñados juegan fútbol los domingos.',
+        questions: [
+          {
+            question: '¿Cuántos hermanos tiene el esposo?',
+            options: ['uno', 'dos', 'tres', 'cuatro'],
+            correctAnswer: 1,
+          },
+          {
+            question: '¿Cómo se llama la cuñada?',
+            options: ['María', 'Elena', 'Carmen', 'Isabel'],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      phrases: [
+        {
+          spanish: 'Mi cuñado es como un hermano',
+          russian: 'Мой деверь как брат',
+          context: 'О близких отношениях',
+        },
+        {
+          spanish: 'Voy de compras con mi cuñada',
+          russian: 'Я хожу по магазинам с золовкой',
+          context: 'О совместном времяпрепровождении',
+        },
+        {
+          spanish: '¿Tienes cuñados?',
+          russian: 'У тебя есть деверья/золовки?',
+          context: 'Вопрос о семье',
+        },
+      },
+      homework: {
+        vocabularyTest: true,
+        listening: true,
+        reading: false,
+        writing: true,
+      },
+    },
+    audioUrl: '/audio/a1-58.mp3',
+    readingText: 'CUÑADO y CUÑADA son palabras para los hermanos y hermanas de tu esposo/esposa. También para los esposos/esposas de tus hermanos/hermanas. El hermano de tu esposa = cuñado. La hermana de tu marido = cuñada. El esposo de tu hermana = cuñado. La esposa de tu hermano = cuñada. En español, una palabra cubre muchas relaciones.',
+    duration: 29,
+    order: 58,
+    isFree: false,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
+    id: 'a1-59',
+    levelId: 'a1',
+    title: 'Описание семьи: прилагательные',
+    description: 'Как описывать членов семьи',
+    content: {
+      introduction: {
+        title: 'Describiendo la familia',
+        goals: [
+          'Выучить прилагательные для описания семьи',
+          'Научиться говорить о характерах',
+          'Использовать SER для характеристик',
+          'Практиковать положительные описания',
+        ],
+        overview: 'Учимся описывать членов семьи используя прилагательные и глагол SER.',
+      },
+      newWords: [],
+      grammar: {
+        title: 'Прилагательные + Familia',
+        explanation: 'Ser + прилагательное для описания характера',
+        examples: [
+          { spanish: 'Mi padre es trabajador', russian: 'мой отец трудолюбивый' },
+          { spanish: 'Mi madre es cariñosa', russian: 'моя мать ласковая' },
+          { spanish: 'Mis hermanos son divertidos', russian: 'мои братья веселые' },
+          { spanish: 'Mi abuela es sabia', russian: 'моя бабушка мудрая' },
+          { spanish: 'Mi familia es unida', russian: 'моя семья дружная' },
+          { spanish: 'Somos una familia feliz', russian: 'мы счастливая семья' },
+        ],
+      },
+      listening: {
+        audioUrl: '/audio/a1-59.mp3',
+        transcript: 'Mi familia es maravillosa. Mi padre es inteligente y trabajador. Mi madre es amable y paciente. Mi hermano mayor es responsable. Mi hermana menor es creativa y divertida. Mis abuelos son sabios y cariñosos. Todos somos muy unidos.',
+        questions: [
+          {
+            question: '¿Cómo es el padre?',
+            options: ['tímido', 'inteligente y trabajador', 'perezoso', 'serio'],
+            correctAnswer: 1,
+          },
+          {
+            question: '¿Cómo es la hermana menor?',
+            options: ['seria', 'tímida', 'creativa y divertida', 'tranquila'],
+            correctAnswer: 2,
+          },
+        ],
+      },
+      phrases: [
+        {
+          spanish: 'Mi familia es muy grande y alegre',
+          russian: 'Моя семья очень большая и веселая',
+          context: 'Общее описание',
+        },
+        {
+          spanish: 'Mi hermano es generoso y amable',
+          russian: 'Мой брат щедрый и добрый',
+          context: 'Комплимент',
+        },
+        {
+          spanish: 'Somos una familia tradicional',
+          russian: 'Мы традиционная семья',
+          context: 'О ценностях',
+        },
+      },
+      homework: {
+        vocabularyTest: true,
+        listening: true,
+        reading: true,
+        writing: true,
+      },
+    },
+    audioUrl: '/audio/a1-59.mp3',
+    readingText: 'Para describir a la familia usamos muchos adjetivos. Positivos: amable, cariñoso, generoso, inteligente, trabajador, divertido, alegre, paciente, sabio, responsable. Con SER: Mi padre es amable. Mi madre es cariñosa. Mis hermanos son divertidos. La familia puede ser: grande, pequeña, unida, feliz, tradicional, moderna.',
+    duration: 31,
+    order: 59,
+    isFree: false,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
+    id: 'a1-60',
+    levelId: 'a1',
+    title: 'Моя семья: итоговая практика',
+    description: 'Рассказываем о своей семье полностью',
+    content: {
+      introduction: {
+        title: 'Presentando mi familia',
+        goals: [
+          'Объединить всю лексику о семье',
+          'Научиться представлять свою семью',
+          'Составить связный рассказ',
+          'Задавать и отвечать на вопросы о семье',
+        ],
+        overview: 'Практикуем все изученные слова о семье в связном повествовании.',
+      },
+      newWords: [],
+      grammar: {
+        title: 'Резюме: Vocabulario de familia',
+        explanation: 'Все слова о семье + притяжательные местоимения + описания',
+        examples: [
+          { spanish: 'Me llamo Ana y tengo una familia grande', russian: 'Меня зовут Ана и у меня большая семья' },
+          { spanish: 'Mis padres se llaman Juan y María', russian: 'Моих родителей зовут Хуан и Мария' },
+          { spanish: 'Tengo dos hermanos y una hermana', russian: 'У меня два брата и одна сестра' },
+          { spanish: 'Mis abuelos viven con nosotros', russian: 'Мои бабушка и дедушка живут с нами' },
+          { spanish: 'Tengo muchos tíos y primos', russian: 'У меня много дядь, теть и кузенов' },
+          { spanish: 'Mi familia es muy unida y cariñosa', russian: 'Моя семья очень дружная и любящая' },
+        ],
+      },
+      listening: {
+        audioUrl: '/audio/a1-60.mp3',
+        transcript: 'Hola, me llamo Carlos. Voy a presentar a mi familia. Somos seis personas en casa: mis padres, mis dos hermanas, mi abuela y yo. Mi padre es ingeniero y mi madre es enfermera. Mi hermana mayor está casada y tiene dos hijos, así que soy tío. Mi hermana menor estudia en la universidad. Mi abuela tiene 80 años y es muy activa. También tengo muchos tíos, tías y primos. En total, somos una familia de más de 30 personas. Nos reunimos en Navidad y todos los cumpleaños. Me encanta mi familia.',
+        questions: [
+          {
+            question: '¿Cuántas personas viven en casa de Carlos?',
+            options: ['cuatro', 'cinco', 'seis', 'siete'],
+            correctAnswer: 2,
+          },
+          {
+            question: '¿Carlos es tío?',
+            options: ['No', 'Sí', 'No dice', 'Va a ser'],
+            correctAnswer: 1,
+          },
+        ],
+      },
+      phrases: [
+        {
+          spanish: 'Quiero presentarte a mi familia',
+          russian: 'Хочу представить тебе мою семью',
+          context: 'Начало представления',
+        },
+        {
+          spanish: 'Somos una familia muy unida',
+          russian: 'Мы очень дружная семья',
+          context: 'Описание отношений',
+        },
+        {
+          spanish: '¿Quieres ver fotos de mi familia?',
+          russian: 'Хочешь посмотреть фотографии моей семьи?',
+          context: 'Предложение',
+        },
+      },
+      homework: {
+        vocabularyTest: true,
+        listening: true,
+        reading: true,
+        writing: true,
+      },
+    },
+    audioUrl: '/audio/a1-60.mp3',
+    readingText: 'Ahora puedes presentar tu familia en español. Empieza con: "Me llamo... y tengo una familia grande/pequeña." Presenta a tus padres: "Mi padre se llama... y es..." "Mi madre se llama... y es...". Habla de hermanos: "Tengo X hermanos." De abuelos, tíos, primos. Describe: "Mi familia es unida/alegre/cariñosa". Pregunta: "¿Y tu familia? ¿Cuántos son?"',
+    duration: 33,
+    order: 60,
+    isFree: false,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+]
