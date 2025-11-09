@@ -64,7 +64,7 @@ export const a2LessonsPerfecto: Lesson[] = [
           russian: 'На этой неделе мы много работали',
           context: 'В текущем периоде времени',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -141,7 +141,7 @@ export const a2LessonsPerfecto: Lesson[] = [
           russian: 'Мы выучили много испанского',
           context: 'Достижение',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -218,7 +218,7 @@ export const a2LessonsPerfecto: Lesson[] = [
           russian: 'Мы написали много писем',
           context: 'Описание действий',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,

@@ -916,7 +916,7 @@ export const a1Lessons: Lesson[] = [
           russian: 'Приеду примерно через 10 минут',
           context: 'Приблизительное время',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -999,7 +999,7 @@ export const a1Lessons: Lesson[] = [
           russian: 'Стоит пять евро',
           context: 'Цена товара',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -1080,7 +1080,7 @@ export const a1Lessons: Lesson[] = [
           russian: 'Я живу на четырнадцатом этаже',
           context: 'Номер этажа',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -1159,7 +1159,7 @@ export const a1Lessons: Lesson[] = [
           russian: 'Живу в двадцати минутах отсюда',
           context: 'Расстояние во времени',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -1238,7 +1238,7 @@ export const a1Lessons: Lesson[] = [
           russian: 'Ограничение скорости девяносто',
           context: 'Дорожные знаки',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -1403,7 +1403,7 @@ export const a1Lessons: Lesson[] = [
           russian: 'Еду в Испанию в сентябре',
           context: 'Планы на поездку',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -1481,7 +1481,7 @@ export const a1Lessons: Lesson[] = [
           russian: 'У нас немного денег',
           context: 'Отрицание',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -1558,7 +1558,7 @@ export const a1Lessons: Lesson[] = [
           russian: 'Моей собаке 12 лет',
           context: 'Возраст животных',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -1638,7 +1638,7 @@ export const a1Lessons: Lesson[] = [
           russian: 'Ты прав, это хорошая идея',
           context: 'Согласие',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -1715,7 +1715,7 @@ export const a1Lessons: Lesson[] = [
           russian: 'Тебе не обязательно приходить, если не хочешь',
           context: 'Отсутствие обязанности',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -1873,7 +1873,7 @@ export const a1Lessons: Lesson[] = [
           russian: 'Ты часто путешествуешь?',
           context: 'Вопрос о привычках',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -1952,7 +1952,7 @@ export const a1Lessons: Lesson[] = [
           russian: 'Что ты ешь на обед?',
           context: 'Вопрос о еде',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,

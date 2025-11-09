@@ -145,7 +145,7 @@ export const a1LessonsFoodDrinks: Lesson[] = [
           russian: 'Я ем овощи каждый день',
           context: 'О привычках питания',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -303,7 +303,7 @@ export const a1LessonsFoodDrinks: Lesson[] = [
           russian: 'Я пью много воды каждый день',
           context: 'О привычках',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -382,7 +382,7 @@ export const a1LessonsFoodDrinks: Lesson[] = [
           russian: 'Какой десерт рекомендуешь?',
           context: 'В ресторане',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -460,7 +460,7 @@ export const a1LessonsFoodDrinks: Lesson[] = [
           russian: 'Поужинаем вместе сегодня вечером?',
           context: 'Приглашение',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -537,7 +537,7 @@ export const a1LessonsFoodDrinks: Lesson[] = [
           russian: 'Обслуживание включено?',
           context: 'При оплате',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -616,7 +616,7 @@ export const a1LessonsFoodDrinks: Lesson[] = [
           russian: 'Еда изысканная',
           context: 'Высокая похвала',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -695,7 +695,7 @@ export const a1LessonsFoodDrinks: Lesson[] = [
           russian: 'Сначала порежь овощи',
           context: 'Инструкция',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,

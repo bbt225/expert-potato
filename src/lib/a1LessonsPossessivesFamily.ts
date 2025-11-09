@@ -372,7 +372,7 @@ export const a1LessonsPossessivesFamily: Lesson[] = [
           russian: 'Он единственный ребенок',
           context: 'Описание семьи',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -449,7 +449,7 @@ export const a1LessonsPossessivesFamily: Lesson[] = [
           russian: 'Твои бабушка и дедушка живы?',
           context: 'Вопрос о семье',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -603,7 +603,7 @@ export const a1LessonsPossessivesFamily: Lesson[] = [
           russian: 'Мои дядя и тетя приглашают нас на ужин',
           context: 'О планах',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -680,7 +680,7 @@ export const a1LessonsPossessivesFamily: Lesson[] = [
           russian: 'Сколько у тебя племянников?',
           context: 'Вопрос о семье',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -757,7 +757,7 @@ export const a1LessonsPossessivesFamily: Lesson[] = [
           russian: 'Сколько у тебя двоюродных братьев и сестер?',
           context: 'Вопрос о семье',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -834,7 +834,7 @@ export const a1LessonsPossessivesFamily: Lesson[] = [
           russian: 'Ты женат/замужем?',
           context: 'Вопрос о семейном положении',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -911,7 +911,7 @@ export const a1LessonsPossessivesFamily: Lesson[] = [
           russian: 'Я хорошо лажу со свекровью',
           context: 'О взаимоотношениях',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -988,7 +988,7 @@ export const a1LessonsPossessivesFamily: Lesson[] = [
           russian: 'У тебя есть деверья/золовки?',
           context: 'Вопрос о семье',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -1065,7 +1065,7 @@ export const a1LessonsPossessivesFamily: Lesson[] = [
           russian: 'Мы традиционная семья',
           context: 'О ценностях',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
@@ -1142,7 +1142,7 @@ export const a1LessonsPossessivesFamily: Lesson[] = [
           russian: 'Хочешь посмотреть фотографии моей семьи?',
           context: 'Предложение',
         },
-      },
+      ],
       homework: {
         vocabularyTest: true,
         listening: true,
