@@ -1,18 +1,9 @@
 import LessonClient from './LessonClient'
+import { generateLessonPaths } from '@/lib/generateLessonPaths'
 
 export function generateStaticParams() {
-  // Generate all possible lesson paths
-  return [
-    { levelId: 'basic', lessonId: 'basic-1' },
-    { levelId: 'basic', lessonId: 'basic-2' },
-    { levelId: 'basic', lessonId: 'basic-3' },
-    { levelId: 'a1', lessonId: 'a1-1' },
-    { levelId: 'a1', lessonId: 'a1-2' },
-    { levelId: 'a2', lessonId: 'a2-1' },
-    { levelId: 'b1', lessonId: 'b1-1' },
-    { levelId: 'b2', lessonId: 'b2-1' },
-    { levelId: 'c1', lessonId: 'c1-1' },
-  ]
+  // Generate all 660 lesson paths (110 per level × 6 levels)
+  return generateLessonPaths()
 }
 
 export default function LessonPage() {

@@ -5,8 +5,8 @@ import { initializeMockData } from '@/lib/database'
 
 export function DataInitializer() {
   useEffect(() => {
-    // Initialize mock data on client side
-    initializeMockData()
+    // Initialize mock data on client side (async)
+    initializeMockData().catch(console.error)
   }, [])
 
   return null

@@ -1,26 +1,34 @@
-// Mock database - all data stored in localStorage
+// Mock database - all data stored in cookies for persistence
 
 import { Level, Lesson, User, Profile, Progress, Subscription } from '@/types'
+import Cookies from 'js-cookie'
 
-// Helper to get from localStorage
+// Cookie options - expires in 30 days
+const COOKIE_OPTIONS = {
+  expires: 30, // 30 days
+  sameSite: 'strict' as const,
+  secure: process.env.NODE_ENV === 'production',
+}
+
+// Helper to get from cookies
 const getFromStorage = <T,>(key: string, defaultValue: T): T => {
   if (typeof window === 'undefined') return defaultValue
   try {
-    const item = window.localStorage.getItem(key)
+    const item = Cookies.get(key)
     return item ? JSON.parse(item) : defaultValue
   } catch (error) {
-    console.error(`Error reading ${key} from localStorage:`, error)
+    console.error(`Error reading ${key} from cookies:`, error)
     return defaultValue
   }
 }
 
-// Helper to save to localStorage
+// Helper to save to cookies
 const saveToStorage = <T,>(key: string, value: T): void => {
   if (typeof window === 'undefined') return
   try {
-    window.localStorage.setItem(key, JSON.stringify(value))
+    Cookies.set(key, JSON.stringify(value), COOKIE_OPTIONS)
   } catch (error) {
-    console.error(`Error saving ${key} to localStorage:`, error)
+    console.error(`Error saving ${key} to cookies:`, error)
   }
 }
 
@@ -93,7 +101,7 @@ export const auth = {
   // Sign out
   signOut: async () => {
     try {
-      window.localStorage.removeItem('currentUser')
+      Cookies.remove('currentUser')
       return { error: null }
     } catch (error: any) {
       return { error: { message: error.message } }
@@ -275,11 +283,11 @@ export const db = {
 }
 
 // Initialize with mock data if empty
-export const initializeMockData = () => {
+export const initializeMockData = async () => {
   if (typeof window === 'undefined') return
 
   // Check if already initialized
-  if (window.localStorage.getItem('dataInitialized')) return
+  if (Cookies.get('dataInitialized')) return
 
   // Import and save levels
   const levels: Level[] = [
@@ -289,7 +297,7 @@ export const initializeMockData = () => {
       description: 'Алфавит, произношение, базовые фразы',
       cefr: 'Pre-A1',
       order: 1,
-      lessonCount: 50,
+      lessonCount: 110,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     },
@@ -299,7 +307,7 @@ export const initializeMockData = () => {
       description: 'Элементарный уровень',
       cefr: 'A1',
       order: 2,
-      lessonCount: 80,
+      lessonCount: 110,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     },
@@ -309,7 +317,7 @@ export const initializeMockData = () => {
       description: 'Предпороговый уровень',
       cefr: 'A2',
       order: 3,
-      lessonCount: 80,
+      lessonCount: 110,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     },
@@ -319,7 +327,7 @@ export const initializeMockData = () => {
       description: 'Пороговый уровень + Subjuntivo',
       cefr: 'B1',
       order: 4,
-      lessonCount: 80,
+      lessonCount: 110,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     },
@@ -329,7 +337,7 @@ export const initializeMockData = () => {
       description: 'Продвинутый пороговый уровень',
       cefr: 'B2',
       order: 5,
-      lessonCount: 80,
+      lessonCount: 110,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     },
@@ -339,7 +347,7 @@ export const initializeMockData = () => {
       description: 'Продвинутый уровень',
       cefr: 'C1',
       order: 6,
-      lessonCount: 80,
+      lessonCount: 110,
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     },
@@ -347,10 +355,12 @@ export const initializeMockData = () => {
 
   saveToStorage('levels', levels)
 
-  // Create lessons for all levels
-  const lessons: Lesson[] = [
-    // === BASIC LEVEL (Pre-A1) ===
-    {
+  // Import lesson generator
+  const { generateAllLessons } = await import('./lessonsData')
+  const lessons = generateAllLessons()
+
+  /* OLD STATIC LESSONS - Now generated automatically by lessonsData.ts
+  {
       id: 'basic-1',
       levelId: 'basic',
       title: 'Испанский алфавит',
@@ -852,6 +862,7 @@ export const initializeMockData = () => {
       updatedAt: new Date().toISOString(),
     },
   ]
+  END OF OLD STATIC LESSONS */
 
   saveToStorage('lessons', lessons)
   saveToStorage('users', [])
@@ -859,7 +870,7 @@ export const initializeMockData = () => {
   saveToStorage('progress', [])
   saveToStorage('subscriptions', [])
 
-  window.localStorage.setItem('dataInitialized', 'true')
+  Cookies.set('dataInitialized', 'true', COOKIE_OPTIONS)
 }
 
 const dbModule = {
