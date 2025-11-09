@@ -6,6 +6,12 @@ import { a1LessonsPossessivesFamily } from './a1LessonsPossessivesFamily'
 import { a1LessonsFoodDrinks } from './a1LessonsFoodDrinks'
 import { a1LessonsBodyClothesHouse } from './a1LessonsBodyClothesHouse'
 import { a1LessonsCityTransportDaily } from './a1LessonsCityTransportDaily'
+import { a2LessonsPerfecto } from './a2LessonsPerfecto'
+import { a2LessonsIndefinido } from './a2LessonsIndefinido'
+import { a2LessonsImperfecto } from './a2LessonsImperfecto'
+import { a2LessonsFutureConditional } from './a2LessonsFutureConditional'
+import { a2LessonsImperativeComparatives } from './a2LessonsImperativeComparatives'
+import { a2LessonsAdvanced } from './a2LessonsAdvanced'
 
 // Helper function to create lesson
 const createLesson = (
@@ -222,41 +228,14 @@ export const generateAllLessons = (): Lesson[] => {
   lessons.push(...a1LessonsBodyClothesHouse) // Lessons 71-85
   lessons.push(...a1LessonsCityTransportDaily) // Lessons 86-100
 
-  // ==================== A2 LEVEL (110 lessons) ====================
-  const a2Topics = [
-    { topic: 'Pretérito Perfecto', base: 'Pret. Perfecto', count: 20 },
-    { topic: 'Pretérito Indefinido', base: 'Pret. Indefinido', count: 20 },
-    { topic: 'Pretérito Imperfecto', base: 'Pret. Imperfecto', count: 20 },
-    { topic: 'Futuro Simple', base: 'Futuro', count: 15 },
-    { topic: 'Condicional Simple', base: 'Condicional', count: 15 },
-    { topic: 'Imperativos', base: 'Imperativos', count: 10 },
-    { topic: 'Comparativos', base: 'Comparativos', count: 10 },
-  ]
-
-  let a2Counter = 1
-  a2Topics.forEach(topic => {
-    for (let i = 0; i < topic.count; i++) {
-      lessons.push(createLesson(
-        `a2-${a2Counter}`,
-        'a2',
-        a2Counter,
-        `${topic.topic} - Урок ${i + 1}`,
-        `Углубленное изучение: ${topic.topic}`,
-        {
-          spanish: [`${topic.base} ${i + 1}`, `He comido`, `Has vivido`, `Ha hablado`],
-          russian: [`${topic.topic} ${i + 1}`, `Я поел`, `Ты жил`, `Он говорил`],
-          transcript: `Estudiamos ${topic.base} en detalle. Lección ${i + 1} de ${topic.count}.`,
-          questions: [{
-            question: `¿Qué tiempo verbal estudiamos?`,
-            options: [topic.topic, 'Presente', 'Otro', 'No sé'],
-            correctAnswer: 0
-          }]
-        },
-        i === 0
-      ))
-      a2Counter++
-    }
-  })
+  // ==================== A2 LEVEL (100 lessons) - DETAILED ====================
+  // Use detailed A2 lessons from separate files
+  lessons.push(...a2LessonsPerfecto) // Lessons 1-15
+  lessons.push(...a2LessonsIndefinido) // Lessons 16-35
+  lessons.push(...a2LessonsImperfecto) // Lessons 36-55
+  lessons.push(...a2LessonsFutureConditional) // Lessons 56-75
+  lessons.push(...a2LessonsImperativeComparatives) // Lessons 76-90
+  lessons.push(...a2LessonsAdvanced) // Lessons 91-100
 
   // ==================== B1 LEVEL (110 lessons) ====================
   const b1Topics = [
