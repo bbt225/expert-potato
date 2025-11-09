@@ -17,6 +17,18 @@ import { b1LessonsSubjuntivoUses } from './b1LessonsSubjuntivoUses'
 import { b1LessonsConditional } from './b1LessonsConditional'
 import { b1LessonsIndirectSpeech } from './b1LessonsIndirectSpeech'
 import { b1LessonsAdvanced } from './b1LessonsAdvanced'
+import { b2LessonsSubjuntivoImperfecto } from './b2LessonsSubjuntivoImperfecto'
+import { b2LessonsCondicionalesSi } from './b2LessonsCondicionalesSi'
+import { b2LessonsSubjuntivoPerfecto } from './b2LessonsSubjuntivoPerfecto'
+import { b2LessonsPassiveVoice } from './b2LessonsPassiveVoice'
+import { b2LessonsIndirectSpeechAdvanced } from './b2LessonsIndirectSpeechAdvanced'
+import { b2LessonsIdioms } from './b2LessonsIdioms'
+import { c1LessonsSubjuntivoPluscuamperfecto } from './c1LessonsSubjuntivoPluscuamperfecto'
+import { c1LessonsFuturoPerfecto } from './c1LessonsFuturoPerfecto'
+import { c1LessonsLiterarySpanish } from './c1LessonsLiterarySpanish'
+import { c1LessonsBusinessSpanish } from './c1LessonsBusinessSpanish'
+import { c1LessonsAcademicDiscourse } from './c1LessonsAcademicDiscourse'
+import { c1LessonsStyleRhetoric } from './c1LessonsStyleRhetoric'
 
 // Helper function to create lesson
 const createLesson = (
@@ -250,75 +262,23 @@ export const generateAllLessons = (): Lesson[] => {
   lessons.push(...b1LessonsIndirectSpeech) // Lessons 61-75
   lessons.push(...b1LessonsAdvanced) // Lessons 76-100
 
-  // ==================== B2 LEVEL (110 lessons) ====================
-  const b2Topics = [
-    { topic: 'Subjuntivo Imperfecto', base: 'Subj. Imperfecto', count: 25 },
-    { topic: 'Subjuntivo Perfecto', base: 'Subj. Perfecto', count: 20 },
-    { topic: 'Condicional Compuesto', base: 'Cond. Compuesto', count: 15 },
-    { topic: 'Oraciones complejas', base: 'Or. Complejas', count: 15 },
-    { topic: 'Expresiones idiomáticas', base: 'Idiomas', count: 20 },
-    { topic: 'Registro formal/informal', base: 'Registro', count: 15 },
-  ]
+  // ==================== B2 LEVEL (120 lessons) - DETAILED ====================
+  // Use detailed B2 lessons from separate files
+  lessons.push(...b2LessonsSubjuntivoImperfecto) // Lessons 1-20
+  lessons.push(...b2LessonsCondicionalesSi) // Lessons 21-40
+  lessons.push(...b2LessonsSubjuntivoPerfecto) // Lessons 41-60
+  lessons.push(...b2LessonsPassiveVoice) // Lessons 61-80
+  lessons.push(...b2LessonsIndirectSpeechAdvanced) // Lessons 81-100
+  lessons.push(...b2LessonsIdioms) // Lessons 101-120
 
-  let b2Counter = 1
-  b2Topics.forEach(topic => {
-    for (let i = 0; i < topic.count; i++) {
-      lessons.push(createLesson(
-        `b2-${b2Counter}`,
-        'b2',
-        b2Counter,
-        `${topic.topic} - Сессия ${i + 1}`,
-        `Мастер-класс: ${topic.topic}`,
-        {
-          spanish: [`${topic.base} ${i + 1}`, `Si tuviera dinero`, `Ojalá pudiera`],
-          russian: [`${topic.topic} ${i + 1}`, `Если бы у меня были деньги`, `Хотел бы я мог`],
-          transcript: `Nivel avanzado: ${topic.base}. Sesión práctica ${i + 1}.`,
-          questions: [{
-            question: `¿Qué aspecto avanzado estudiamos?`,
-            options: [topic.topic, 'Básico', 'Alfabeto', 'Números'],
-            correctAnswer: 0
-          }]
-        },
-        false
-      ))
-      b2Counter++
-    }
-  })
-
-  // ==================== C1 LEVEL (110 lessons) ====================
-  const c1Topics = [
-    { topic: 'Pluscuamperfecto de Subjuntivo', base: 'Plusc. Subj.', count: 20 },
-    { topic: 'Futuro Perfecto', base: 'Fut. Perfecto', count: 15 },
-    { topic: 'Literatura española', base: 'Literatura', count: 20 },
-    { topic: 'Español de negocios', base: 'Negocios', count: 20 },
-    { topic: 'Discurso académico', base: 'Académico', count: 15 },
-    { topic: 'Análisis de textos', base: 'Análisis', count: 20 },
-  ]
-
-  let c1Counter = 1
-  c1Topics.forEach(topic => {
-    for (let i = 0; i < topic.count; i++) {
-      lessons.push(createLesson(
-        `c1-${c1Counter}`,
-        'c1',
-        c1Counter,
-        `${topic.topic} - Урок ${i + 1}`,
-        `Экспертный уровень: ${topic.topic}`,
-        {
-          spanish: [`${topic.base} ${i + 1}`, `Si hubiera sabido`, `Hubiera preferido`],
-          russian: [`${topic.topic} ${i + 1}`, `Если бы я знал`, `Я бы предпочел`],
-          transcript: `Nivel de maestría: ${topic.base}. Lección avanzada ${i + 1}.`,
-          questions: [{
-            question: `¿Qué tema de nivel experto estudiamos?`,
-            options: [topic.topic, 'Básico', 'Intermedio', 'Principiante'],
-            correctAnswer: 0
-          }]
-        },
-        false
-      ))
-      c1Counter++
-    }
-  })
+  // ==================== C1 LEVEL (120 lessons) - DETAILED ====================
+  // Use detailed C1 lessons from separate files
+  lessons.push(...c1LessonsSubjuntivoPluscuamperfecto) // Lessons 1-20
+  lessons.push(...c1LessonsFuturoPerfecto) // Lessons 21-40
+  lessons.push(...c1LessonsLiterarySpanish) // Lessons 41-60
+  lessons.push(...c1LessonsBusinessSpanish) // Lessons 61-80
+  lessons.push(...c1LessonsAcademicDiscourse) // Lessons 81-100
+  lessons.push(...c1LessonsStyleRhetoric) // Lessons 101-120
 
   console.log(`Total lessons generated: ${lessons.length}`)
   return lessons
